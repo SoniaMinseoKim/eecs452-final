@@ -12,7 +12,7 @@ Andrew Schallwig (arschall@umich.edu)
 ## Contents  
 This repository contains source code, reports, and data created for the EECS 452 final project: _3D Marker Tracking Cameras on Low-Cost Embedded Platorms_. This repository includes the following files:  
  - README.md : Overview of repository including authors and description of contents
- - COPYRIGHT.txt : MIT License copyright documenting ownership and usage of the project contents  
+ - LICENSE : MIT License copyright documenting ownership and usage of the project contents  
  - 2024-Team-6-final.pdf : PDF report created by the team for course submission
  - 2024-Team-6-poster.pdf : PDF poster presented by the team at the University of Michigan Michigan Design Program Expo   
  - videos/ : Two pairs of demonstration videos, depicting recorded 3D motion and reconstruction visualization  
