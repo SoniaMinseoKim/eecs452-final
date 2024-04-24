@@ -10,7 +10,7 @@ Aida Ruan (aidaruan@umich.edu)
 Andrew Schallwig (arschall@umich.edu)  
 
 ## Contents  
-This .zip file includes the following:  
+This repository includes the following:  
  - README.txt :  
  - COPYRIGHT.txt :  
  - 2024-Team-6-final.pdf :  
