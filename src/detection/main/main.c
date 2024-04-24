@@ -1,7 +1,12 @@
 /* ESP32 decimation and blob detection algorithm
- * Authored Andrew Schallwig [arschall@umich.edu]
+ *
+ * This file defines the methods for image decimation, delta detection, and data transmission on the ESP32
+ * 
+ * Authored Vishal Chandra [chandrav@umich.edu], Darren Fitzgerald [darrenwf@umich.edu], Sonia Kim [kminseo@umich.edu], 
+ * Aida Ruan [aidaruan@umich.edu], Andrew Schallwig [arschall@umich.edu]
+ * 
  * EECS 452 - Winter 2024
- * 1 April 2024 - University of Michigan, Ann Arbor
+ * 24 April 2024 - University of Michigan, Ann Arbor
 */ 
 
 //---------------------------- include ----------------------------
@@ -17,6 +22,7 @@
 #include "esp_event.h"
 #include "nvs_flash.h"
 #include "esp_netif.h"
+#include "esp_heap_caps_init.h"
 #include "protocol_examples_common.h"
 
 #include "lwip/err.h"
@@ -25,13 +31,15 @@
 #include <lwip/netdb.h>
 
 //---------------------------- define ----------------------------
+
+// decimation parameters, can be tuned
 #define DEC_RATE 4
-#define VALID_WIDTH 6 // arbitrary, need to tune
-#define CAM_ID 0
+#define VALID_WIDTH 4 
+#define CAM_ID 2
 #define MAX_WINDOW_SIZE 50000
 
-#define HOST_IP_ADDR CONFIG_EXAMPLE_IPV4_ADDR
-#define PORT CONFIG_EXAMPLE_PORT
+#define HOST_IP_ADDR CONFIG_IPV4_ADDR
+#define PORT CONFIG_PORT
 
 #define CAM_PIN_PWDN -1  //power down is not used
 #define CAM_PIN_RESET -1 //software reset will be performed
@@ -58,35 +66,23 @@ typedef struct TagPair{
     __uint16_t py;
 } TagPair;
 
-typedef struct RTPHeader {
-    __uint8_t version : 2;
-    __uint8_t P : 1;
-    __uint8_t X : 1;
-    __uint8_t CC : 4;
-    __uint8_t M : 1;
-    __uint8_t PT : 7;
-    __uint16_t SN : 16;
-    __uint32_t TS : 32;
-    __uint32_t SSRC: 32;
-} RTPHeader;
-
 typedef struct TagHeader {
-    __uint8_t cid : 8;
-    __uint16_t px : 16;
-    __uint16_t py : 16;
-    suseconds_t us : 32;
-    time_t s : 64;
+    __uint16_t wwidth;
+    __uint16_t px;
+    __uint16_t py;
+    __uint32_t ts;
 } TagHeader;
 
 //---------------------------- define statics ----------------------------
 static camera_fb_t *pic;
 static uint8_t wbuf[MAX_WINDOW_SIZE];
-// static SemaphoreHandle_t mutex;
 static __uint16_t task_ct;
+static __uint32_t frame_ct;
+
 static TaskHandle_t xHandle = NULL;
 static struct sockaddr_in dest_addr;
 
-static const char *TAG = "eecs452:delta_dec";
+static const char *TAG = "eecs452:detection";
 
 static char host_ip[] = HOST_IP_ADDR;
 static int addr_family = AF_INET;
@@ -118,13 +114,13 @@ static camera_config_t camera_config = {
     .ledc_channel = LEDC_CHANNEL_0,
 
     .pixel_format = PIXFORMAT_GRAYSCALE, //YUV422,GRAYSCALE,RGB565,JPEG
-    .frame_size = FRAMESIZE_HVGA,  // RESET: to FRAMESIZE_QVGA   //QQVGA-UXGA, For ESP32, do not use sizes above QVGA when not JPEG. The performance of the ESP32-S series has improved a lot, but JPEG mode always gives better frame rates.
+    .frame_size = FRAMESIZE_QVGA,    //QQVGA-UXGA, For ESP32, do not use sizes above QVGA when not JPEG. The performance of the ESP32-S series has improved a lot, but JPEG mode always gives better frame rates.
 
     .jpeg_quality = 12, //0-63, for OV series camera sensors, lower number means higher quality
     .fb_count = 1,       //When jpeg mode is used, if fb_count more than one, the driver will work in continuous mode.
     .grab_mode = CAMERA_GRAB_WHEN_EMPTY,
 
-    .fb_location = CAMERA_FB_IN_PSRAM, // RESET: to CAMERA_FB_IN_DRAM
+    .fb_location = CAMERA_FB_IN_DRAM,
 };
 
 //---------------------------- methods ----------------------------
@@ -141,10 +137,10 @@ static esp_err_t init_camera(void)
     return ESP_OK;
 }
 
-// returns 0 if not a valid region, center px if valid TODO: is 0 ever a valid center?
+// returns 0 if not a valid region, center px if valid
 bool valid_region(TagPair* tp, camera_fb_t* fb, __uint32_t *idx, __uint16_t *col) {
     // determine width of detection region
-    __uint16_t px = (*idx) % fb->width; // if mod is too slow try https://lemire.me/blog/2019/02/08/faster-remainders-when-the-divisor-is-a-constant-beating-compilers-and-libdivide/
+    __uint16_t px = (*idx) % fb->width; 
     __uint16_t py = (*idx)/fb->width;
 
     __uint16_t min_x = py * fb->width;
@@ -154,13 +150,13 @@ bool valid_region(TagPair* tp, camera_fb_t* fb, __uint32_t *idx, __uint16_t *col
     while(rpx < max_x && fb->buf[rpx] == 255) ++rpx; // look right
     while(lpx >= min_x && fb->buf[lpx] == 255) --lpx; // look left
 
-    __uint8_t width = rpx - lpx; // calculate width of detection 
+    __uint16_t width = rpx - lpx; // calculate width of detection 
     if(width < VALID_WIDTH) {  
+        free(tp);
         return false; // if too small to be valid, return false
     }
 
-    // __uint16_t wwidth = width*6;
-    __uint16_t wwidth = 96;
+    __uint16_t wwidth = 10*width;
     __uint16_t whwidth = wwidth/2;
 
     // discard cropped apriltags
@@ -180,43 +176,34 @@ bool valid_region(TagPair* tp, camera_fb_t* fb, __uint32_t *idx, __uint16_t *col
     return true;
 }
 
-void send_image_over_serial(uint8_t *pic) {
-    for (size_t i = 0; i < (9216); i++) {
-        printf("%02X", pic[i]);
-    }  
-    printf("%%%%");
-}
-
 // send timestamp, xy, windowed bytes
 void send_window(void * in) {
     TagPair* tp = (TagPair*)in;
-    tp->wwidth = 96;    
     __uint16_t whwidth = tp->wwidth/2;
 
-    ESP_LOGI(TAG, "sending at (%d, %d)", tp->px, tp->py);
-
-    struct timeval ct = {0, 0};
-    int err = gettimeofday(&ct, 0);
-    if (err < 0) ESP_LOGE(TAG, "Error occurred getting system time");
-
-    TagHeader th = {CAM_ID, tp->px, tp->py, ct.tv_sec, ct.tv_usec};
+    TagHeader th = {tp->wwidth, tp->px, tp->py, frame_ct};
+    ESP_LOGI(TAG, "Frame count: %lu", frame_ct);
     memcpy(wbuf, &th, sizeof(th));
-    __uint8_t hoffset = sizeof(TagHeader);
+    __uint8_t hoffset = sizeof(th);
 
     __uint16_t spx = (tp->py - whwidth)*pic->width + (tp->px - whwidth);
     for(__uint16_t i = 0; i < tp->wwidth; ++i) {
         memcpy(hoffset + wbuf + (tp->wwidth*i), pic->buf + (spx + (pic->width*i)), tp->wwidth);
     }
 
-    // send_image_over_serial(wbuf);
-    int err = sendto(sock, wbuf, (tp->wwidth*tp->wwidth), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
-    if (err < 0) ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+ retry_sendwin:
+    int err = sendto(sock, wbuf, (tp->wwidth*tp->wwidth + hoffset), 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+    if (err == -1)  {
+        ESP_LOGE(TAG, "Error occurred during sending: errno %i", errno);
+        if (errno == 12) goto retry_sendwin;
+    }
 
-    --task_ct;
     free(tp);
+    --task_ct;
     vTaskDelete(NULL);
 }
 
+// main detection runner method
 void run_detection() {
     unsigned int start_t, end_t;
     double total_t;
@@ -224,26 +211,24 @@ void run_detection() {
 
     while(1) {
         pic = esp_camera_fb_get();
-        // send_image_over_serial(pic);
-
         start_t = xthal_get_ccount(); // start
 
         __uint16_t num_x = pic->width / DEC_RATE;
         __uint16_t col_idx = 0; 
 
-        for(__uint32_t px = 0; px < (pic->len - 32000); px += DEC_RATE) { // stride thru cols
+        for(__uint32_t px = 0; px < (pic->len); px += DEC_RATE) { // stride thru cols 
             if(pic->buf[px] == 255) { // delta found
-                TagPair * tp = heap_caps_malloc(sizeof(TagPair), MALLOC_CAP_DEFAULT);
-                tp->px = 0;
-                tp->py = 0;
-                tp->wwidth = 0;
-                if (valid_region(tp, pic, &px, &col_idx)) { // check if this is a valid detection 
-                    ESP_LOGI(TAG, "delta at (%d, %d)", tp->px, tp->py);
-                    ++task_ct;
-                    xTaskCreatePinnedToCore(send_window, "WSEND", CONFIG_PTHREAD_TASK_STACK_SIZE_DEFAULT, tp, tskIDLE_PRIORITY, &xHandle, 1);
+              TagPair *tp = heap_caps_calloc(1, sizeof(TagPair), MALLOC_CAP_8BIT | MALLOC_CAP_SPIRAM);
+              if (valid_region(tp, pic, &px, &col_idx)) { // check if this is a valid detection 
+                ESP_LOGI(TAG, "delta at (%i, %i)", tp->px, tp->py);
+                if(xTaskCreatePinnedToCore(send_window, "WSEND", CONFIG_PTHREAD_TASK_STACK_SIZE_DEFAULT, tp, tskIDLE_PRIORITY, &xHandle, 1) == pdPASS) {
+                    ++task_ct; 
                 }
-            }
-            // stride through rows
+                else {
+                    free(tp);
+                }
+              }
+            } // stride through rows
             col_idx++;
             if(col_idx == num_x) {
                 col_idx = 0;
@@ -254,11 +239,15 @@ void run_detection() {
         end_t = xthal_get_ccount();
         esp_clk_tree_src_get_freq_hz(SOC_MOD_CLK_CPU, ESP_CLK_TREE_SRC_FREQ_PRECISION_EXACT, &freq);
         total_t = (double)(freq/(end_t - start_t));
-        // ESP_LOGI(TAG, "at: %f fps", total_t); // freq = 160MHz
+        ESP_LOGI(TAG, "at: %f fps", total_t); // freq = 160MHz
 
-        while(task_ct > 0) {}
+        while(task_ct > 0) {
+            printf("waiting on %i...", task_ct);
+        }
+        printf("done\n");
 
         esp_camera_fb_return(pic);
+        ++frame_ct;
     }
 }
 
@@ -277,17 +266,19 @@ void app_main(void)
 
     setvbuf(stdout, NULL, _IONBF, 0);
     task_ct = 0;
+    frame_ct = 0;
 
     sock = socket(addr_family, SOCK_DGRAM, ip_protocol);
     dest_addr.sin_addr.s_addr = inet_addr(HOST_IP_ADDR);
+    ESP_LOGI(TAG, "Sending data to server at %s on port %i", HOST_IP_ADDR, PORT);
     dest_addr.sin_family = AF_INET;
     dest_addr.sin_port = htons(PORT);
 
     sensor_t* s = esp_camera_sensor_get();
     s->set_aec_value(s, 0);
-    s->set_ae_level(s, 0);
+    s->set_ae_level(s, -2);
     s->set_aec2(s, 0);
-    
+    s->set_brightness(s, -2); 
     // start driver task
     xTaskCreatePinnedToCore(run_detection, "DCODE", CONFIG_MAIN_TASK_STACK_SIZE, NULL, tskIDLE_PRIORITY, &xHandle, 0);
 }
