@@ -15,7 +15,7 @@ This repository contains source code, reports, and data created for the EECS 452
  - LICENSE : MIT License copyright documenting ownership and usage of the project contents  
  - 2024-Team-6-final.pdf : PDF report created by the team for course submission
  - 2024-Team-6-poster.pdf : PDF poster presented by the team at the University of Michigan Michigan Design Program Expo   
- - videos/ : Two pairs of demonstration videos, depicting recorded 3D motion and reconstruction visualization  
+ - videos/ : Two sets of demonstration videos, depicting recorded 3D motion and reconstruction visualization  
  - src/ :  All source code for the project, including `.c`, `.py`, and `.rs` files. This code defines the calibration, delta detection, data transmission, reconstruction, and visualization pipeline.  
     - src/OVERVIEW.txt : Description of the code present in this directory  
     - src/USAGE.txt : Description of how to run the calibration, prepare the embedded image processing, and connect to and run the base-station for complete testing  
