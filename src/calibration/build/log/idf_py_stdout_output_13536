@@ -1,0 +1,72 @@
+[1/5] cmd.exe /C "cd /D C:\Users\aboru\Desktop\Project\eecs452\testing\jpeg-stream\build\esp-idf\esptool_py && C:\Users\aboru\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/partition_table/partition-table.bin C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/hello-apriltag.bin"
+hello-apriltag.bin binary size 0xe4750 bytes. Smallest app partition is 0x100000 bytes. 0x1b8b0 bytes (11%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\aboru\Desktop\Project\eecs452\testing\jpeg-stream\build\bootloader\esp-idf\esptool_py && C:\Users\aboru\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.2.1\components\esptool_py && C:\Users\aboru\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.2.1 -D SERIAL_TOOL=C:/Users/aboru/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.2.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;-esptool.py --chip esp32 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 hello-apriltag.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM10
+Connecting....
+Chip is ESP32-D0WDQ6-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:d4:da:5a:f5:88
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16356...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16356 compressed) at 0x00001000 in 0.9 seconds (effective 239.8 kbit/s)...
+Hash of data verified.
+Compressed 935760 bytes to 563171...
+Writing at 0x00010000... (2 %)
+Writing at 0x00020856... (5 %)
+Writing at 0x0002a810... (8 %)
+Writing at 0x0003057e... (11 %)
+Writing at 0x0003610f... (14 %)
+Writing at 0x00041cba... (17 %)
+Writing at 0x00047755... (20 %)
+Writing at 0x0004ea8f... (22 %)
+Writing at 0x000560c9... (25 %)
+Writing at 0x0005c514... (28 %)
+Writing at 0x000620a5... (31 %)
+Writing at 0x00067d7d... (34 %)
+Writing at 0x0006dc1f... (37 %)
+Writing at 0x00073b61... (40 %)
+Writing at 0x00079b86... (42 %)
+Writing at 0x0007f9bd... (45 %)
+Writing at 0x00084abf... (48 %)
+Writing at 0x0008a0a5... (51 %)
+Writing at 0x0008f505... (54 %)
+Writing at 0x00094990... (57 %)
+Writing at 0x0009a050... (60 %)
+Writing at 0x0009f803... (62 %)
+Writing at 0x000a56ae... (65 %)
+Writing at 0x000ab2af... (68 %)
+Writing at 0x000b11bb... (71 %)
+Writing at 0x000b77c4... (74 %)
+Writing at 0x000bd1b7... (77 %)
+Writing at 0x000c2fcc... (80 %)
+Writing at 0x000ce731... (82 %)
+Writing at 0x000d46a4... (85 %)
+Writing at 0x000daae7... (88 %)
+Writing at 0x000e0f35... (91 %)
+Writing at 0x000e6a00... (94 %)
+Writing at 0x000ed0b9... (97 %)
+Writing at 0x000f2345... (100 %)
+Wrote 935760 bytes (563171 compressed) at 0x00010000 in 13.5 seconds (effective 555.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 347.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+-after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build -P C:/Espressif/frameworks/esp-idf-v5.2.1/components/esptool_py/run_serial_tool.cmake"

@@ -1,0 +1,45 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\aboru\Desktop\Project\eecs452\testing\jpeg-stream\build\bootloader\esp-idf\esptool_py && C:\Users\aboru\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hello_apriltag_main.c.obj
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c: In function 'udp_client_task':
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:113:28: warning: variable 'dest_addr' set but not used [-Wunused-but-set-variable]
+  113 |         struct sockaddr_in dest_addr;
+      |                            ^~~~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:111:9: warning: variable 'ip_protocol' set but not used [-Wunused-but-set-variable]
+  111 |     int ip_protocol = 0;
+      |         ^~~~~~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:110:9: warning: variable 'addr_family' set but not used [-Wunused-but-set-variable]
+  110 |     int addr_family = 0;
+      |         ^~~~~~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:109:10: warning: unused variable 'host_ip' [-Wunused-variable]
+  109 |     char host_ip[] = HOST_IP_ADDR;
+      |          ^~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:108:10: warning: unused variable 'rx_buffer' [-Wunused-variable]
+  108 |     char rx_buffer[128];
+      |          ^~~~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c: In function 'app_main':
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:205:10: warning: unused variable 'host_ip' [-Wunused-variable]
+  205 |     char host_ip[] = HOST_IP_ADDR;
+      |          ^~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:204:10: warning: unused variable 'rx_buffer' [-Wunused-variable]
+  204 |     char rx_buffer[128];
+      |          ^~~~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c: At top level:
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:106:13: warning: 'udp_client_task' defined but not used [-Wunused-function]
+  106 | static void udp_client_task(void *pvParameters)
+      |             ^~~~~~~~~~~~~~~
+C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/main/hello_apriltag_main.c:65:14: warning: 'payload' defined but not used [-Wunused-variable]
+   65 | static char *payload = "Message from ESP32 ";
+      |              ^~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable hello-apriltag.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/hello-apriltag.bin
+[7/7] cmd.exe /C "cd /D C:\Users\aboru\Desktop\Project\eecs452\testing\jpeg-stream\build\esp-idf\esptool_py && C:\Users\aboru\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/partition_table/partition-table.bin C:/Users/aboru/Desktop/Project/eecs452/testing/jpeg-stream/build/hello-apriltag.bin"
+hello-apriltag.bin binary size 0xe4750 bytes. Smallest app partition is 0x100000 bytes. 0x1b8b0 bytes (11%) free.

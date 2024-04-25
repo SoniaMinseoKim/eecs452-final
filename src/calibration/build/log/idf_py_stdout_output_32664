@@ -1,0 +1,547 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 17 2024 23:16:51[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ba34h (178740) map[0m
+[0;32mI (165) esp_image: segment 1: paddr=0003ba5c vaddr=3ffb0000 size=045bch ( 17852) load[0m
+[0;32mI (172) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=973ach (619436) map[0m
+[0;32mI (385) esp_image: segment 3: paddr=000d73d4 vaddr=3ffb45bc size=0089ch (  2204) load[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d7c78 vaddr=40080000 size=1cab4h (117428) load[0m
+[0;32mI (451) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (451) boot: Disabling RNG early entropy source...[0m
+[0;32mI (462) cpu_start: Multicore app[0m
+[0;32mI (463) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (465) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (465) esp_psram: Speed: 40MHz[0m
+[0;32mI (469) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (476) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (1391) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1399) cpu_start: Pro cpu start user code[0m
+[0;32mI (1399) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1399) cpu_start: Application information:[0m
+[0;32mI (1402) cpu_start: Project name:     hello-apriltag[0m
+[0;32mI (1408) cpu_start: App version:      7878da7-dirty[0m
+[0;32mI (1413) cpu_start: Compile time:     Apr 18 2024 11:47:05[0m
+[0;32mI (1420) cpu_start: ELF file SHA256:  142cde4a28eb67f4...[0m
+[0;32mI (1426) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (1431) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1435) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1440) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (1446) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1453) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1459) heap_init: At 3FFB9058 len 00026FA8 (155 KiB): DRAM[0m
+[0;32mI (1465) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1471) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1478) heap_init: At 4009CAB4 len 0000354C (13 KiB): IRAM[0m
+[0;32mI (1485) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1493) spi_flash: detected chip: generic[0m
+[0;32mI (1496) spi_flash: flash io: dio[0m
+[0;33mW (1500) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (1514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1525) main_task: Started on CPU0[0m
+[0;32mI (1535) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1535) main_task: Calling app_main()[0m
+[0;32mI (1585) example_connect: Start example_connect.[0m
+I (1605) wifi:wifi driver task: 3ffc8ca0, prio:23, stack:6656, core=0
+I (1625) wifi:wifi firmware version: a9f5b59
+I (1625) wifi:wifi certification version: v7.0
+I (1625) wifi:config NVS flash: enabled
+I (1625) wifi:config nano formating: disabled
+I (1635) wifi:Init data frame dynamic rx buffer num: 32
+I (1635) wifi:Init static rx mgmt buffer num: 5
+I (1645) wifi:Init management short buffer num: 32
+I (1645) wifi:Init static tx buffer num: 16
+I (1645) wifi:Init tx cache buffer num: 32
+I (1655) wifi:Init static rx buffer size: 1600
+I (1655) wifi:Init static rx buffer num: 10
+I (1665) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1665) wifi_init: rx ba win: 6[0m
+[0;32mI (1665) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1675) wifi_init: udp mbox: 6[0m
+[0;32mI (1675) wifi_init: tcp mbox: 6[0m
+[0;32mI (1685) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1685) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1685) wifi_init: tcp mss: 1440[0m
+[0;32mI (1695) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1695) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1705) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (1785) wifi:mode : sta (d4:d4:da:5a:ef:a8)
+I (1785) wifi:enable tsf
+[0;32mI (1795) example_connect: Connecting to DEB9248...[0m
+[0;32mI (1795) example_connect: Waiting for IP(s)[0m
+I (4205) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4465) wifi:state: init -> auth (b0)
+I (4485) wifi:state: auth -> assoc (0)
+I (4495) wifi:state: assoc -> run (10)
+I (4515) wifi:connected with DEB9248, aid = 3, channel 11, BW20, bssid = b2:60:88:90:77:ca
+I (4515) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (4525) wifi:pm start, type: 1
+
+I (4525) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4535) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5545) esp_netif_handlers: example_netif_sta ip: 192.168.137.180, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5545) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.137.180[0m
+[0;32mI (5555) example_common: Connected to example_netif_sta[0m
+[0;32mI (5555) example_common: - IPv4 address: 192.168.137.180,[0m
+[0;32mI (5565) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (5575) cam_hal: cam init ok[0m
+[0;32mI (5575) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (5585) sccb: sccb_i2c_port=1[0m
+[0;32mI (5595) camera: Detected camera at address=0x30[0m
+[0;32mI (5595) camera: Detected OV2640 camera[0m
+[0;32mI (5595) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (5695) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 38[0m
+[0;32mI (5695) cam_hal: Allocating 157286 Byte frame buffer in PSRAM[0m
+[0;32mI (5705) cam_hal: cam config ok[0m
+[0;32mI (5705) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 12[0m
+[0;32mI (5805) example: Socket created, sending to 35.3.100.225:3333[0m
+[0;32mI (6065) example: Message sent[0m
+[0;32mI (6235) example: Message sent[0m
+[0;32mI (6395) example: Message sent[0m
+[0;32mI (6545) example: Message sent[0m
+[0;32mI (6705) example: Message sent[0m
+[0;32mI (6865) example: Message sent[0m
+[0;32mI (7025) example: Message sent[0m
+[0;32mI (7185) example: Message sent[0m
+[0;32mI (7345) example: Message sent[0m
+[0;32mI (7505) example: Message sent[0m
+[0;32mI (7665) example: Message sent[0m
+[0;32mI (7825) example: Message sent[0m
+[0;32mI (7985) example: Message sent[0m
+[0;32mI (8145) example: Message sent[0m
+[0;32mI (8305) example: Message sent[0m
+[0;32mI (8465) example: Message sent[0m
+[0;32mI (8625) example: Message sent[0m
+[0;32mI (8785) example: Message sent[0m
+[0;32mI (8945) example: Message sent[0m
+[0;32mI (9105) example: Message sent[0m
+[0;32mI (9275) example: Message sent[0m
+[0;32mI (9425) example: Message sent[0m
+[0;32mI (9585) example: Message sent[0m
+[0;32mI (9755) example: Message sent[0m
+[0;32mI (9905) example: Message sent[0m
+[0;32mI (10065) example: Message sent[0m
+[0;32mI (10235) example: Message sent[0m
+[0;32mI (10395) example: Message sent[0m
+[0;32mI (10545) example: Message sent[0m
+[0;32mI (10705) example: Message sent[0m
+[0;32mI (10875) example: Message sent[0m
+[0;32mI (11035) example: Message sent[0m
+[0;32mI (11195) example: Message sent[0m
+[0;32mI (11355) example: Message sent[0m
+[0;32mI (11515) example: Message sent[0m
+[0;32mI (11675) example: Message sent[0m
+[0;32mI (11835) example: Message sent[0m
+[0;32mI (11995) example: Message sent[0m
+[0;32mI (12155) example: Message sent[0m
+[0;32mI (12315) example: Message sent[0m
+[0;32mI (12475) example: Message sent[0m
+[0;32mI (12625) example: Message sent[0m
+[0;32mI (12785) example: Message sent[0m
+[0;32mI (12945) example: Message sent[0m
+[0;32mI (13105) example: Message sent[0m
+[0;32mI (13265) example: Message sent[0m
+[0;32mI (13425) example: Message sent[0m
+[0;32mI (13595) example: Message sent[0m
+[0;32mI (13745) example: Message sent[0m
+[0;32mI (13905) example: Message sent[0m
+[0;32mI (14065) example: Message sent[0m
+[0;32mI (14225) example: Message sent[0m
+[0;32mI (14395) example: Message sent[0m
+[0;32mI (14555) example: Message sent[0m
+[0;32mI (14715) example: Message sent[0m
+[0;32mI (14875) example: Message sent[0m
+[0;32mI (15035) example: Message sent[0m
+[0;32mI (15185) example: Message sent[0m
+[0;32mI (15345) example: Message sent[0m
+[0;32mI (15515) example: Message sent[0m
+[0;32mI (15665) example: Message sent[0m
+[0;32mI (15825) example: Message sent[0m
+[0;32mI (15995) example: Message sent[0m
+[0;32mI (16145) example: Message sent[0m
+[0;32mI (16315) example: Message sent[0m
+[0;32mI (16475) example: Message sent[0m
+[0;32mI (16635) example: Message sent[0m
+[0;32mI (16785) example: Message sent[0m
+[0;32mI (16955) example: Message sent[0m
+[0;32mI (17115) example: Message sent[0m
+[0;32mI (17275) example: Message sent[0m
+[0;32mI (17425) example: Message sent[0m
+[0;32mI (17585) example: Message sent[0m
+[0;32mI (17745) example: Message sent[0m
+[0;32mI (17905) example: Message sent[0m
+[0;32mI (18075) example: Message sent[0m
+[0;32mI (18235) example: Message sent[0m
+[0;32mI (18385) example: Message sent[0m
+[0;32mI (18545) example: Message sent[0m
+[0;32mI (18705) example: Message sent[0m
+[0;32mI (18875) example: Message sent[0m
+[0;32mI (19035) example: Message sent[0m
+[0;32mI (19195) example: Message sent[0m
+[0;32mI (19355) example: Message sent[0m
+[0;32mI (19515) example: Message sent[0m
+[0;32mI (19675) example: Message sent[0m
+[0;32mI (19835) example: Message sent[0m
+[0;32mI (19995) example: Message sent[0m
+[0;32mI (20145) example: Message sent[0m
+[0;32mI (20315) example: Message sent[0m
+[0;32mI (20475) example: Message sent[0m
+[0;32mI (20635) example: Message sent[0m
+[0;32mI (20785) example: Message sent[0m
+[0;32mI (20945) example: Message sent[0m
+[0;32mI (21105) example: Message sent[0m
+[0;32mI (21265) example: Message sent[0m
+[0;32mI (21435) example: Message sent[0m
+[0;32mI (21585) example: Message sent[0m
+[0;32mI (21755) example: Message sent[0m
+[0;32mI (21915) example: Message sent[0m
+[0;32mI (22065) example: Message sent[0m
+[0;32mI (22225) example: Message sent[0m
+[0;32mI (22385) example: Message sent[0m
+[0;32mI (22545) example: Message sent[0m
+[0;32mI (22715) example: Message sent[0m
+[0;32mI (22875) example: Message sent[0m
+[0;32mI (23035) example: Message sent[0m
+[0;32mI (23185) example: Message sent[0m
+[0;32mI (23355) example: Message sent[0m
+[0;32mI (23505) example: Message sent[0m
+[0;32mI (23665) example: Message sent[0m
+[0;32mI (23825) example: Message sent[0m
+[0;32mI (23995) example: Message sent[0m
+[0;32mI (24145) example: Message sent[0m
+[0;32mI (24305) example: Message sent[0m
+[0;32mI (24465) example: Message sent[0m
+[0;32mI (24625) example: Message sent[0m
+[0;32mI (24785) example: Message sent[0m
+[0;32mI (24945) example: Message sent[0m
+[0;32mI (25105) example: Message sent[0m
+[0;32mI (25265) example: Message sent[0m
+[0;32mI (25425) example: Message sent[0m
+[0;32mI (25585) example: Message sent[0m
+[0;32mI (25745) example: Message sent[0m
+[0;32mI (25905) example: Message sent[0m
+[0;32mI (26065) example: Message sent[0m
+[0;32mI (26225) example: Message sent[0m
+[0;32mI (26385) example: Message sent[0m
+[0;32mI (26545) example: Message sent[0m
+[0;32mI (26705) example: Message sent[0m
+[0;32mI (26875) example: Message sent[0m
+[0;32mI (27035) example: Message sent[0m
+[0;32mI (27195) example: Message sent[0m
+[0;32mI (27355) example: Message sent[0m
+[0;32mI (27515) example: Message sent[0m
+[0;32mI (27665) example: Message sent[0m
+[0;32mI (27825) example: Message sent[0m
+[0;32mI (27985) example: Message sent[0m
+[0;32mI (28155) example: Message sent[0m
+[0;32mI (28305) example: Message sent[0m
+[0;32mI (28475) example: Message sent[0m
+[0;32mI (28625) example: Message sent[0m
+[0;32mI (28785) example: Message sent[0m
+[0;32mI (28955) example: Message sent[0m
+[0;32mI (29115) example: Message sent[0m
+[0;32mI (29265) example: Message sent[0m
+[0;32mI (29425) example: Message sent[0m
+[0;32mI (29595) example: Message sent[0m
+[0;32mI (29745) example: Message sent[0m
+[0;32mI (29915) example: Message sent[0m
+[0;32mI (30065) example: Message sent[0m
+[0;32mI (30225) example: Message sent[0m
+[0;32mI (30385) example: Message sent[0m
+[0;32mI (30555) example: Message sent[0m
+[0;32mI (30705) example: Message sent[0m
+[0;32mI (30865) example: Message sent[0m
+[0;32mI (31025) example: Message sent[0m
+[0;32mI (31185) example: Message sent[0m
+[0;32mI (31345) example: Message sent[0m
+[0;32mI (31505) example: Message sent[0m
+[0;32mI (31675) example: Message sent[0m
+[0;32mI (31825) example: Message sent[0m
+[0;32mI (31985) example: Message sent[0m
+[0;32mI (32145) example: Message sent[0m
+[0;32mI (32305) example: Message sent[0m
+[0;32mI (32465) example: Message sent[0m
+[0;32mI (32635) example: Message sent[0m
+[0;32mI (32785) example: Message sent[0m
+[0;32mI (32945) example: Message sent[0m
+[0;32mI (33115) example: Message sent[0m
+[0;32mI (33275) example: Message sent[0m
+[0;32mI (33425) example: Message sent[0m
+[0;32mI (33585) example: Message sent[0m
+[0;32mI (33755) example: Message sent[0m
+[0;32mI (33905) example: Message sent[0m
+[0;32mI (34065) example: Message sent[0m
+[0;32mI (34235) example: Message sent[0m
+[0;32mI (34395) example: Message sent[0m
+[0;32mI (34555) example: Message sent[0m
+[0;32mI (34715) example: Message sent[0m
+[0;32mI (34865) example: Message sent[0m
+[0;32mI (35025) example: Message sent[0m
+[0;32mI (35185) example: Message sent[0m
+[0;32mI (35345) example: Message sent[0m
+[0;32mI (35505) example: Message sent[0m
+[0;32mI (35675) example: Message sent[0m
+[0;32mI (35835) example: Message sent[0m
+[0;32mI (35995) example: Message sent[0m
+[0;32mI (36145) example: Message sent[0m
+[0;32mI (36315) example: Message sent[0m
+[0;32mI (36465) example: Message sent[0m
+[0;32mI (36635) example: Message sent[0m
+[0;32mI (36785) example: Message sent[0m
+[0;32mI (36955) example: Message sent[0m
+[0;32mI (37115) example: Message sent[0m
+[0;32mI (37265) example: Message sent[0m
+[0;32mI (37425) example: Message sent[0m
+[0;32mI (37595) example: Message sent[0m
+[0;32mI (37745) example: Message sent[0m
+[0;32mI (37915) example: Message sent[0m
+[0;32mI (38065) example: Message sent[0m
+[0;32mI (38225) example: Message sent[0m
+[0;32mI (38385) example: Message sent[0m
+[0;32mI (38555) example: Message sent[0m
+[0;32mI (38705) example: Message sent[0m
+[0;32mI (38865) example: Message sent[0m
+[0;32mI (39025) example: Message sent[0m
+[0;32mI (39185) example: Message sent[0m
+[0;32mI (39345) example: Message sent[0m
+[0;32mI (39505) example: Message sent[0m
+[0;32mI (39665) example: Message sent[0m
+[0;32mI (39825) example: Message sent[0m
+[0;32mI (39985) example: Message sent[0m
+[0;32mI (40155) example: Message sent[0m
+[0;32mI (40305) example: Message sent[0m
+[0;32mI (40475) example: Message sent[0m
+[0;32mI (40625) example: Message sent[0m
+[0;32mI (40795) example: Message sent[0m
+[0;32mI (40935) example: Message sent[0m
+[0;32mI (41105) example: Message sent[0m
+[0;32mI (41265) example: Message sent[0m
+[0;32mI (41425) example: Message sent[0m
+[0;32mI (41595) example: Message sent[0m
+[0;32mI (41745) example: Message sent[0m
+[0;32mI (41905) example: Message sent[0m
+[0;32mI (42065) example: Message sent[0m
+[0;32mI (42225) example: Message sent[0m
+[0;32mI (42385) example: Message sent[0m
+[0;32mI (42545) example: Message sent[0m
+[0;32mI (42705) example: Message sent[0m
+[0;32mI (42865) example: Message sent[0m
+[0;32mI (43025) example: Message sent[0m
+[0;32mI (43185) example: Message sent[0m
+[0;32mI (43345) example: Message sent[0m
+[0;32mI (43505) example: Message sent[0m
+[0;32mI (43665) example: Message sent[0m
+[0;32mI (43825) example: Message sent[0m
+[0;32mI (43985) example: Message sent[0m
+[0;32mI (44145) example: Message sent[0m
+[0;32mI (44305) example: Message sent[0m
+[0;32mI (44465) example: Message sent[0m
+[0;32mI (44625) example: Message sent[0m
+[0;32mI (44785) example: Message sent[0m
+[0;32mI (44945) example: Message sent[0m
+[0;32mI (45105) example: Message sent[0m
+[0;32mI (45265) example: Message sent[0m
+[0;32mI (45425) example: Message sent[0m
+[0;32mI (45585) example: Message sent[0m
+[0;32mI (45745) example: Message sent[0m
+[0;32mI (45905) example: Message sent[0m
+[0;32mI (46065) example: Message sent[0m
+[0;32mI (46215) example: Message sent[0m
+[0;32mI (46385) example: Message sent[0m
+[0;32mI (46535) example: Message sent[0m
+[0;32mI (46705) example: Message sent[0m
+[0;32mI (46855) example: Message sent[0m
+[0;32mI (47015) example: Message sent[0m
+[0;32mI (47175) example: Message sent[0m
+[0;32mI (47335) example: Message sent[0m
+[0;32mI (47505) example: Message sent[0m
+[0;32mI (47655) example: Message sent[0m
+[0;32mI (47815) example: Message sent[0m
+[0;32mI (47985) example: Message sent[0m
+[0;32mI (48135) example: Message sent[0m
+[0;32mI (48295) example: Message sent[0m
+[0;32mI (48465) example: Message sent[0m
+[0;32mI (48625) example: Message sent[0m
+[0;32mI (48785) example: Message sent[0m
+[0;32mI (48935) example: Message sent[0m
+[0;32mI (49095) example: Message sent[0m
+[0;32mI (49265) example: Message sent[0m
+[0;32mI (49415) example: Message sent[0m
+[0;32mI (49585) example: Message sent[0m
+[0;32mI (49735) example: Message sent[0m
+[0;32mI (49895) example: Message sent[0m
+[0;32mI (50055) example: Message sent[0m
+[0;32mI (50215) example: Message sent[0m
+[0;32mI (50375) example: Message sent[0m
+[0;32mI (50535) example: Message sent[0m
+[0;32mI (50695) example: Message sent[0m
+[0;32mI (50865) example: Message sent[0m
+[0;32mI (51025) example: Message sent[0m
+[0;32mI (51175) example: Message sent[0m
+[0;32mI (51335) example: Message sent[0m
+[0;32mI (51505) example: Message sent[0m
+[0;32mI (51655) example: Message sent[0m
+[0;32mI (51815) example: Message sent[0m
+[0;32mI (51985) example: Message sent[0m
+[0;32mI (52135) example: Message sent[0m
+[0;32mI (52295) example: Message sent[0m
+[0;32mI (52465) example: Message sent[0m
+[0;32mI (52615) example: Message sent[0m
+[0;32mI (52775) example: Message sent[0m
+[0;32mI (52935) example: Message sent[0m
+[0;32mI (53095) example: Message sent[0m
+[0;32mI (53255) example: Message sent[0m
+[0;32mI (53425) example: Message sent[0m
+[0;32mI (53575) example: Message sent[0m
+[0;32mI (53735) example: Message sent[0m
+[0;32mI (53905) example: Message sent[0m
+[0;32mI (54065) example: Message sent[0m
+[0;32mI (54215) example: Message sent[0m
+[0;32mI (54385) example: Message sent[0m
+[0;32mI (54545) example: Message sent[0m
+[0;32mI (54705) example: Message sent[0m
+[0;32mI (54855) example: Message sent[0m
+[0;32mI (55015) example: Message sent[0m
+[0;32mI (55175) example: Message sent[0m
+[0;32mI (55335) example: Message sent[0m
+[0;32mI (55495) example: Message sent[0m
+[0;32mI (55645) example: Message sent[0m
+[0;32mI (55815) example: Message sent[0m
+[0;32mI (55985) example: Message sent[0m
+[0;32mI (56135) example: Message sent[0m
+[0;32mI (56295) example: Message sent[0m
+[0;32mI (56455) example: Message sent[0m
+[0;32mI (56615) example: Message sent[0m
+[0;32mI (56775) example: Message sent[0m
+[0;32mI (56935) example: Message sent[0m
+[0;32mI (57095) example: Message sent[0m
+[0;32mI (57255) example: Message sent[0m
+[0;32mI (57415) example: Message sent[0m
+[0;32mI (57575) example: Message sent[0m
+[0;32mI (57735) example: Message sent[0m
+[0;32mI (57895) example: Message sent[0m
+[0;32mI (58055) example: Message sent[0m
+[0;32mI (58225) example: Message sent[0m
+[0;32mI (58375) example: Message sent[0m
+[0;32mI (58535) example: Message sent[0m
+[0;32mI (58705) example: Message sent[0m
+[0;32mI (58855) example: Message sent[0m
+[0;32mI (59015) example: Message sent[0m
+[0;32mI (59175) example: Message sent[0m
+[0;32mI (59335) example: Message sent[0m
+[0;32mI (59495) example: Message sent[0m
+[0;32mI (59655) example: Message sent[0m
+[0;32mI (59825) example: Message sent[0m
+[0;32mI (59975) example: Message sent[0m
+[0;32mI (60135) example: Message sent[0m
+[0;32mI (60295) example: Message sent[0m
+[0;32mI (60455) example: Message sent[0m
+[0;32mI (60615) example: Message sent[0m
+[0;32mI (60775) example: Message sent[0m
+[0;32mI (60935) example: Message sent[0m
+[0;32mI (61095) example: Message sent[0m
+[0;32mI (61255) example: Message sent[0m
+[0;32mI (61415) example: Message sent[0m
+[0;32mI (61575) example: Message sent[0m
+[0;32mI (61725) example: Message sent[0m
+[0;32mI (61895) example: Message sent[0m
+[0;32mI (62055) example: Message sent[0m
+[0;32mI (62215) example: Message sent[0m
+[0;32mI (62375) example: Message sent[0m
+[0;32mI (62535) example: Message sent[0m
+[0;32mI (62695) example: Message sent[0m
+[0;32mI (62855) example: Message sent[0m
+[0;32mI (63015) example: Message sent[0m
+[0;32mI (63175) example: Message sent[0m
+[0;32mI (63335) example: Message sent[0m
+[0;32mI (63495) example: Message sent[0m
+[0;32mI (63655) example: Message sent[0m
+[0;32mI (63805) example: Message sent[0m
+[0;32mI (63965) example: Message sent[0m
+[0;32mI (64145) example: Message sent[0m
+[0;32mI (64285) example: Message sent[0m
+[0;32mI (64445) example: Message sent[0m
+[0;32mI (64615) example: Message sent[0m
+[0;32mI (64765) example: Message sent[0m
+[0;32mI (64925) example: Message sent[0m
+[0;32mI (65085) example: Message sent[0m
+[0;32mI (65245) example: Message sent[0m
+[0;32mI (65415) example: Message sent[0m
+[0;32mI (65565) example: Message sent[0m
+[0;32mI (65735) example: Message sent[0m
+[0;32mI (65885) example: Message sent[0m
+[0;32mI (66045) example: Message sent[0m
+[0;32mI (66205) example: Message sent[0m
+[0;32mI (66365) example: Message sent[0m
+[0;32mI (66525) example: Message sent[0m
+[0;32mI (66685) example: Message sent[0m
+[0;32mI (66845) example: Message sent[0m
+[0;32mI (67005) example: Message sent[0m
+[0;32mI (67165) example: Message sent[0m
+[0;32mI (67325) example: Message sent[0m
+[0;32mI (67485) example: Message sent[0m
+[0;32mI (67645) example: Message sent[0m
+[0;32mI (67815) example: Message sent[0m
+[0;32mI (67965) example: Message sent[0m
+[0;32mI (68135) example: Message sent[0m
+[0;32mI (68295) example: Message sent[0m
+[0;32mI (68445) example: Message sent[0m
+[0;32mI (68605) example: Message sent[0m
+[0;32mI (68765) example: Message sent[0m
+[0;32mI (68925) example: Message sent[0m
+[0;32mI (69085) example: Message sent[0m
+[0;32mI (69245) example: Message sent[0m
+[0;32mI (69415) example: Message sent[0m
+[0;32mI (69565) example: Message sent[0m
+[0;32mI (69725) example: Message sent[0m
+[0;32mI (69895) example: Message sent[0m
+[0;32mI (70055) example: Message sent[0m
+[0;32mI (70205) example: Message sent[0m
+[0;32mI (70365) example: Message sent[0m
+[0;32mI (70525) example: Message sent[0m
+[0;32mI (70695) example: Message sent[0m
+[0;32mI (70845) example: Message sent[0m
+[0;32mI (71015) example: Message sent[0m
+[0;32mI (71165) example: Message sent[0m
+[0;32mI (71335) example: Message sent[0m
+[0;32mI (71485) example: Message sent[0m
+[0;32mI (71645) example: Message sent[0m
+[0;32mI (71805) example: Message sent[0m
+[0;32mI (71965) example: Message sent[0m
+[0;32mI (72125) example: Message sent[0m
+[0;32mI (72285) example: Message sent[0m
+[0;32mI (72445) example: Message sent[0m
+[0;32mI (72615) example: Message sent[0m
+[0;32mI (72765) example: Message sent[0m
+[0;32mI (72925) example: Message sent[0m
+[0;32mI (73085) example: Message sent[0m
+[0;32mI (73245) example: Message sent[0m
+[0;32mI (73405) example: Message sent[0m
+[0;32mI (73575) example: Message sent[0m
+[0;32mI (73725) example: Message sent[0m
+[0;32mI (73885) example: Message sent[0m
+[0;32mI (74045) example: Message sent[0m
+[0;32mI (74205) example: Message sent[0m
+[0;32mI (74365) example: Message sent[0m

@@ -1,0 +1,1652 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 17 2024 22:24:56[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ba34h (178740) map[0m
+[0;32mI (165) esp_image: segment 1: paddr=0003ba5c vaddr=3ffb0000 size=045bch ( 17852) load[0m
+[0;32mI (172) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=96c04h (617476) map[0m
+[0;32mI (384) esp_image: segment 3: paddr=000d6c2c vaddr=3ffb45bc size=0089ch (  2204) load[0m
+[0;32mI (385) esp_image: segment 4: paddr=000d74d0 vaddr=40080000 size=1caf8h (117496) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (462) cpu_start: Multicore app[0m
+[0;32mI (462) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (464) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (466) esp_psram: Speed: 40MHz[0m
+[0;32mI (470) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (478) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (1392) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1401) cpu_start: Pro cpu start user code[0m
+[0;32mI (1401) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1401) cpu_start: Application information:[0m
+[0;32mI (1404) cpu_start: Project name:     delta_dec[0m
+[0;32mI (1409) cpu_start: App version:      d173edf-dirty[0m
+[0;32mI (1415) cpu_start: Compile time:     Apr 17 2024 23:00:47[0m
+[0;32mI (1421) cpu_start: ELF file SHA256:  17c62367181dfb5e...[0m
+[0;32mI (1427) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (1432) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1437) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1442) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (1447) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1454) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1460) heap_init: At 3FFC53C8 len 0001AC38 (107 KiB): DRAM[0m
+[0;32mI (1466) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1473) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1479) heap_init: At 4009CAF8 len 00003508 (13 KiB): IRAM[0m
+[0;32mI (1486) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1494) spi_flash: detected chip: generic[0m
+[0;32mI (1498) spi_flash: flash io: dio[0m
+[0;33mW (1502) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (1515) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1526) main_task: Started on CPU0[0m
+[0;32mI (1536) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1536) main_task: Calling app_main()[0m
+[0;32mI (1536) eecs452:delta_dec: initializing camera[0m
+[0;32mI (1546) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1556) cam_hal: cam init ok[0m
+[0;32mI (1556) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (1556) sccb: sccb_i2c_port=1[0m
+[0;32mI (1576) camera: Detected camera at address=0x30[0m
+[0;32mI (1576) camera: Detected OV2640 camera[0m
+[0;32mI (1576) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1666) esp32 ll_cam: node_size: 2560, nodes_per_line: 1, lines_per_node: 1, dma_half_buffer_min:  2560, dma_half_buffer: 15360,lines_per_half_buffer:  6, dma_buffer_size: 30720, image_size: 153600[0m
+[0;32mI (1666) cam_hal: buffer_size: 30720, half_buffer_size: 15360, node_buffer_size: 2560, node_cnt: 12, total_cnt: 10[0m
+[0;32mI (1676) cam_hal: Allocating 76800 Byte frame buffer in OnBoard RAM[0m
+[0;32mI (1686) cam_hal: cam config ok[0m
+[0;32mI (1696) ov2640: Set PLL: clk_2x: 0, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+[0;32mI (1826) example_connect: Start example_connect.[0m
+I (1836) wifi:wifi driver task: 3ffd5bc8, prio:23, stack:6656, core=0
+I (1856) wifi:wifi firmware version: a9f5b59
+I (1856) wifi:wifi certification version: v7.0
+I (1856) wifi:config NVS flash: enabled
+I (1856) wifi:config nano formating: disabled
+I (1866) wifi:Init data frame dynamic rx buffer num: 32
+I (1866) wifi:Init static rx mgmt buffer num: 5
+I (1876) wifi:Init management short buffer num: 32
+I (1876) wifi:Init static tx buffer num: 16
+I (1886) wifi:Init tx cache buffer num: 32
+I (1886) wifi:Init static rx buffer size: 1600
+I (1886) wcam_hal: EV-EOF-OVF
+ifi:Init static rx buffer num: 10
+I (1896) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1896) wifi_init: rx ba win: 6[0m
+[0;32mI (1906) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1906) wifi_init: udp mbox: 6[0m
+[0;32mI (1906) wifi_init: tcp mbox: 6[0m
+[0;32mI (1916) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1916) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1926) wifi_init: tcp mss: 1440[0m
+[0;32mI (1926) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1936) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1936) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1946) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+cam_hal: EV-EOF-OVF
+I (2026) wifi:mode : sta (d4:d4:da:5a:ef:a8)
+I (2026) wifi:enable tsf
+[0;32mI (2036) example_connect: Connecting to DEB9248...[0m
+[0;32mI (2036) example_connect: Waiting for IP(s)[0m
+I (4446) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (4706) wifi:state: init -> auth (b0)
+I (4726) wifi:state: auth -> assoc (0)
+I (4736) wifi:state: assoc -> run (10)
+I (4776) wifi:connected with DEB9248, aid = 9, channel 1, BW20, bssid = b2:60:88:90:77:ca
+I (4776) wifi:security: WPA2-PSK, phy: bgn, rssi: -27
+I (4776) wifi:pm start, type: 1
+
+I (4776) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4836) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+[0;32mI (5786) esp_netif_handlers: example_netif_sta ip: 192.168.137.49, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5786) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.137.49[0m
+[0;32mI (5796) example_common: Connected to example_netif_sta[0m
+[0;32mI (5796) example_common: - IPv4 address: 192.168.137.49,[0m
+[0;32mI (5806) eecs452:delta_dec: Sending data to server at 35.2.68.163 on port 3333[0m
+[0;32mI (5816) main_task: Returned from app_main()[0m
+[0;32mI (5826) eecs452:delta_dec: at: 263.000000 fps[0m
+done
+[0;32mI (5966) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (6126) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (6286) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (6446) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (6606) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (6766) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (6926) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (7086) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (7246) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (7406) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (7566) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (7726) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (7876) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (8046) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (8206) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (8366) eecs452:delta_dec: at: 675.000000 fps[0m
+done
+[0;32mI (8516) eecs452:delta_dec: at: 681.000000 fps[0m
+done
+[0;32mI (8686) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (8686) eecs452:delta_dec: at: 481.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (8846) eecs452:delta_dec: at: 665.000000 fps[0m
+done
+[0;32mI (9006) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (9006) eecs452:delta_dec: at: 452.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (9166) eecs452:delta_dec: delta at (164, 64)[0m
+[0;32mI (9166) eecs452:delta_dec: delta at (148, 76)[0m
+[0;32mI (9166) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (9176) eecs452:delta_dec: at: 83.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (9316) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (9326) eecs452:delta_dec: at: 152.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (9486) eecs452:delta_dec: delta at (156, 64)[0m
+[0;32mI (9486) eecs452:delta_dec: delta at (152, 76)[0m
+[0;32mI (9486) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (9486) eecs452:delta_dec: delta at (164, 92)[0m
+[0;32mI (9496) eecs452:delta_dec: at: 86.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (9636) eecs452:delta_dec: delta at (160, 64)[0m
+[0;32mI (9636) eecs452:delta_dec: delta at (144, 76)[0m
+[0;32mI (9646) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (9656) eecs452:delta_dec: at: 69.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (9806) eecs452:delta_dec: delta at (152, 64)[0m
+[0;32mI (9806) eecs452:delta_dec: delta at (148, 76)[0m
+[0;32mI (9806) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (9816) eecs452:delta_dec: delta at (172, 92)[0m
+[0;32mI (9816) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (9816) eecs452:delta_dec: delta at (156, 100)[0m
+[0;32mI (9836) eecs452:delta_dec: at: 32.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (9966) eecs452:delta_dec: delta at (144, 64)[0m
+[0;32mI (9966) eecs452:delta_dec: delta at (164, 64)[0m
+[0;32mI (9966) eecs452:delta_dec: delta at (148, 76)[0m
+[0;32mI (9976) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (9976) eecs452:delta_dec: delta at (160, 88)[0m
+[0;32mI (9976) eecs452:delta_dec: delta at (168, 96)[0m
+[0;32mI (9986) eecs452:delta_dec: at: 45.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (10126) eecs452:delta_dec: delta at (148, 68)[0m
+[0;32mI (10126) eecs452:delta_dec: delta at (144, 76)[0m
+[0;32mI (10126) eecs452:delta_dec: delta at (152, 80)[0m
+[0;32mI (10126) eecs452:delta_dec: delta at (148, 84)[0m
+[0;32mI (10146) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (10146) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (10146) eecs452:delta_dec: delta at (156, 92)[0m
+[0;32mI (10176) eecs452:delta_dec: at: 20.000000 fps[0m
+done
+cam_hal: EV-EOF-OVF
+[0;32mI (10356) eecs452:delta_dec: delta at (128, 72)[0m
+[0;32mI (10366) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (10366) eecs452:delta_dec: delta at (152, 76)[0m
+[0;32mI (10376) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (10376) eecs452:delta_dec: delta at (128, 84)[0m
+[0;32mI (10376) eecs452:delta_dec: delta at (148, 84)[0m
+[0;32mI (10386) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (10386) eecs452:delta_dec: delta at (124, 92)[0m
+[0;32mI (10396) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (10406) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (10406) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (10416) eecs452:delta_dec: delta at (124, 100)[0m
+[0;32mI (10416) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (10426) eecs452:delta_dec: delta at (160, 100)[0m
+[0;32mI (10436) eecs452:delta_dec: at: 13.000000 fps[0m
+waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (10606) eecs452:delta_dec: delta at (128, 76)[0m
+[0;32mI (10606) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (10606) eecs452:delta_dec: delta at (128, 84)[0m
+[0;32mI (10606) eecs452:delta_dec: delta at (148, 84)[0m
+[0;32mI (10616) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (10616) eecs452:delta_dec: delta at (124, 92)[0m
+[0;32mI (10626) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (10626) eecs452:delta_dec: delta at (160, 92)[0m
+[0;32mI (10646) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (10646) eecs452:delta_dec: delta at (124, 100)[0m
+[0;32mI (10646) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (10646) eecs452:delta_dec: delta at (160, 100)[0m
+[0;32mI (10666) eecs452:delta_dec: at: 16.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (10846) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (10846) eecs452:delta_dec: delta at (132, 76)[0m
+[0;32mI (10846) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (10846) eecs452:delta_dec: delta at (128, 84)[0m
+[0;32mI (10856) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (10856) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (10866) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (10866) eecs452:delta_dec: delta at (164, 92)[0m
+[0;32mI (10876) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (10876) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (10886) eecs452:delta_dec: delta at (164, 100)[0m
+[0;32mI (10896) eecs452:delta_dec: at: 18.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+cam_hal: EV-VSYNC-OVF
+[0;32mI (11166) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (11166) eecs452:delta_dec: delta at (132, 76)[0m
+[0;32mI (11166) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (11166) eecs452:delta_dec: delta at (132, 84)[0m
+[0;32mI (11176) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (11186) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (11196) eecs452:delta_dec: delta at (168, 88)[0m
+[0;32mI (11196) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (11196) eecs452:delta_dec: delta at (156, 92)[0m
+[0;32mI (11206) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (11216) eecs452:delta_dec: delta at (168, 96)[0m
+[0;32mI (11216) eecs452:delta_dec: delta at (132, 100)[0m
+[0;32mI (11216) eecs452:delta_dec: delta at (168, 100)[0m
+[0;32mI (11246) eecs452:delta_dec: at: 12.000000 fps[0m
+waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+cam_hal: EV-EOF-OVF
+[0;32mI (11476) eecs452:delta_dec: delta at (156, 68)[0m
+[0;32mI (11476) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (11476) eecs452:delta_dec: delta at (132, 76)[0m
+[0;32mI (11486) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (11506) eecs452:delta_dec: delta at (132, 84)[0m
+[0;32mI (11506) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (11506) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (11516) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (11516) eecs452:delta_dec: delta at (168, 88)[0m
+[0;32mI (11526) eecs452:delta_dec: delta at (160, 92)[0m
+[0;32mI (11526) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (11536) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (11536) eecs452:delta_dec: delta at (168, 96)[0m
+[0;32mI (11556) eecs452:delta_dec: at: 13.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (11726) eecs452:delta_dec: delta at (156, 72)[0m
+[0;32mI (11726) eecs452:delta_dec: delta at (136, 76)[0m
+[0;32mI (11726) eecs452:delta_dec: delta at (144, 76)[0m
+[0;32mI (11726) eecs452:delta_dec: delta at (128, 80)[0m
+[0;32mI (11736) eecs452:delta_dec: delta at (140, 84)[0m
+[0;32mI (11736) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (11746) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (11746) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (11766) eecs452:delta_dec: delta at (164, 92)[0m
+[0;32mI (11766) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (11766) eecs452:delta_dec: delta at (132, 100)[0m
+[0;32mI (11776) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (11776) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (11786) eecs452:delta_dec: delta at (164, 100)[0m
+[0;32mI (11796) eecs452:delta_dec: at: 13.000000 fps[0m
+waiting on 2...waiting on 1...done
+[0;32mI (11966) eecs452:delta_dec: delta at (132, 76)[0m
+[0;32mI (11966) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (11966) eecs452:delta_dec: delta at (128, 84)[0m
+[0;32mI (11976) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (11986) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (11996) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (11996) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (11996) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (11996) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (12006) eecs452:delta_dec: delta at (156, 100)[0m
+[0;32mI (12016) eecs452:delta_dec: at: 19.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (12126) eecs452:delta_dec: delta at (156, 72)[0m
+[0;32mI (12126) eecs452:delta_dec: delta at (132, 76)[0m
+[0;32mI (12126) eecs452:delta_dec: delta at (128, 84)[0m
+[0;32mI (12126) eecs452:delta_dec: delta at (148, 84)[0m
+[0;32mI (12136) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (12136) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (12146) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (12156) eecs452:delta_dec: delta at (164, 92)[0m
+[0;32mI (12156) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (12156) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (12166) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (12166) eecs452:delta_dec: delta at (156, 100)[0m
+[0;32mI (12186) eecs452:delta_dec: delta at (164, 100)[0m
+[0;32mI (12186) eecs452:delta_dec: at: 16.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+cam_hal: EV-EOF-OVF
+[0;32mI (12446) eecs452:delta_dec: delta at (144, 84)[0m
+[0;32mI (12446) eecs452:delta_dec: delta at (124, 88)[0m
+[0;32mI (12446) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (12446) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (12456) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (12456) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (12466) eecs452:delta_dec: delta at (160, 100)[0m
+[0;32mI (12476) eecs452:delta_dec: at: 31.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (12606) eecs452:delta_dec: delta at (132, 80)[0m
+[0;32mI (12606) eecs452:delta_dec: delta at (124, 84)[0m
+[0;32mI (12606) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (12616) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (12626) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (12626) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (12626) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (12646) eecs452:delta_dec: delta at (160, 100)[0m
+[0;32mI (12646) eecs452:delta_dec: at: 23.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (12766) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (12766) eecs452:delta_dec: delta at (124, 84)[0m
+[0;32mI (12766) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (12766) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (12786) eecs452:delta_dec: delta at (124, 92)[0m
+[0;32mI (12786) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (12796) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (12806) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (12806) eecs452:delta_dec: delta at (160, 96)[0m
+[0;32mI (12806) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (12816) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (12816) eecs452:delta_dec: at: 17.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (12916) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (12916) eecs452:delta_dec: delta at (124, 84)[0m
+[0;32mI (12916) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (12926) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (12946) eecs452:delta_dec: delta at (124, 92)[0m
+[0;32mI (12946) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (12946) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (12956) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (12956) eecs452:delta_dec: delta at (160, 96)[0m
+[0;32mI (12966) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (12966) eecs452:delta_dec: at: 19.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (13076) eecs452:delta_dec: delta at (128, 80)[0m
+[0;32mI (13076) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (13076) eecs452:delta_dec: delta at (140, 88)[0m
+[0;32mI (13086) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (13086) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (13096) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (13096) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (13106) eecs452:delta_dec: delta at (156, 100)[0m
+[0;32mI (13106) eecs452:delta_dec: at: 28.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (13236) eecs452:delta_dec: delta at (140, 84)[0m
+[0;32mI (13236) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (13236) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (13246) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (13256) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (13266) eecs452:delta_dec: at: 28.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (13396) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (13396) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (13406) eecs452:delta_dec: at: 130.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (13566) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (13566) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (13576) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (13726) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (13726) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (13726) eecs452:delta_dec: at: 118.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (13886) eecs452:delta_dec: delta at (152, 76)[0m
+[0;32mI (13886) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (13886) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (13906) eecs452:delta_dec: at: 49.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (14036) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (14036) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (14036) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (14046) eecs452:delta_dec: at: 106.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (14206) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (14206) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (14216) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (14356) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (14356) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (14366) eecs452:delta_dec: at: 92.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (14526) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (14526) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (14526) eecs452:delta_dec: at: 105.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (14686) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (14686) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (14696) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (14846) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (14846) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (14856) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (15006) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (15006) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (15006) eecs452:delta_dec: at: 123.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (15156) eecs452:delta_dec: delta at (140, 88)[0m
+[0;32mI (15156) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (15156) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (15166) eecs452:delta_dec: at: 80.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (15326) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (15326) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (15326) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (15336) eecs452:delta_dec: at: 80.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (15486) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (15486) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (15486) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (15506) eecs452:delta_dec: at: 48.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (15646) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (15646) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (15646) eecs452:delta_dec: at: 164.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (15806) eecs452:delta_dec: delta at (140, 76)[0m
+[0;32mI (15806) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (15806) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (15816) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (15816) eecs452:delta_dec: at: 69.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (15966) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (15966) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (15966) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (15966) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (15986) eecs452:delta_dec: at: 48.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (16116) eecs452:delta_dec: delta at (140, 76)[0m
+[0;32mI (16116) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (16116) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (16116) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (16126) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (16136) eecs452:delta_dec: at: 45.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (16276) eecs452:delta_dec: delta at (136, 76)[0m
+[0;32mI (16276) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (16276) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (16286) eecs452:delta_dec: at: 79.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (16436) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (16436) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (16436) eecs452:delta_dec: at: 108.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (16596) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (16596) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (16596) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (16616) eecs452:delta_dec: at: 47.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (16756) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (16756) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (16756) eecs452:delta_dec: at: 116.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (16916) eecs452:delta_dec: delta at (140, 88)[0m
+[0;32mI (16916) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (16916) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (16936) eecs452:delta_dec: at: 48.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (17076) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (17076) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (17076) eecs452:delta_dec: at: 144.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (17236) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (17236) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (17236) eecs452:delta_dec: at: 115.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (17396) eecs452:delta_dec: delta at (152, 76)[0m
+[0;32mI (17396) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (17396) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (17406) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (17556) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (17556) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (17556) eecs452:delta_dec: at: 102.000000 fps[0m
+waiting on 1...done
+[0;32mI (17716) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (17716) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (17716) eecs452:delta_dec: at: 134.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (17876) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (17876) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (17886) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (18036) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (18036) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (18036) eecs452:delta_dec: at: 120.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (18196) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (18196) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (18206) eecs452:delta_dec: at: 97.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (18356) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (18356) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (18356) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (18366) eecs452:delta_dec: at: 61.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (18516) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (18516) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (18516) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (18536) eecs452:delta_dec: at: 49.000000 fps[0m
+done
+[0;32mI (18676) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (18676) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (18686) eecs452:delta_dec: at: 83.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (18836) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (18836) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (18856) eecs452:delta_dec: at: 48.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (18996) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (18996) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19006) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (19156) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (19156) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19166) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (19316) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19316) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (19326) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...done
+[0;32mI (19476) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19476) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (19486) eecs452:delta_dec: at: 100.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (19636) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19636) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (19636) eecs452:delta_dec: at: 131.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (19796) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19796) eecs452:delta_dec: at: 381.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (19956) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (19956) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (19956) eecs452:delta_dec: at: 163.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (20116) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (20116) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (20116) eecs452:delta_dec: at: 147.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (20276) eecs452:delta_dec: delta at (148, 84)[0m
+[0;32mI (20276) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (20276) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (20286) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (20436) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (20436) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (20446) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (20596) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (20596) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (20596) eecs452:delta_dec: at: 135.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (20756) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (20756) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (20766) eecs452:delta_dec: at: 98.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (20916) eecs452:delta_dec: delta at (164, 72)[0m
+[0;32mI (20916) eecs452:delta_dec: delta at (148, 92)[0m
+[0;32mI (20916) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (20936) eecs452:delta_dec: at: 36.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (21076) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (21076) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (21076) eecs452:delta_dec: at: 121.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (21236) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (21236) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (21236) eecs452:delta_dec: at: 175.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (21396) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (21396) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (21396) eecs452:delta_dec: at: 147.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (21556) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (21556) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (21556) eecs452:delta_dec: at: 133.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (21716) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (21716) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (21726) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (21876) eecs452:delta_dec: delta at (152, 76)[0m
+[0;32mI (21876) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (21876) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (21876) eecs452:delta_dec: at: 108.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22026) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22026) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (22036) eecs452:delta_dec: at: 143.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22196) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22196) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (22206) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22356) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (22356) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22356) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (22366) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22516) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22516) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (22526) eecs452:delta_dec: at: 83.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22676) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22676) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (22676) eecs452:delta_dec: at: 162.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22836) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (22836) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22836) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (22846) eecs452:delta_dec: at: 82.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (22996) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (22996) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23006) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (23156) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (23156) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23166) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (23316) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (23316) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23316) eecs452:delta_dec: at: 158.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (23476) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (23476) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23476) eecs452:delta_dec: at: 123.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (23636) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (23636) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23646) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (23796) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (23796) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23806) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (23946) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (23956) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (23966) eecs452:delta_dec: at: 65.000000 fps[0m
+waiting on 1...waiting on 1...done
+[0;32mI (24116) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (24116) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (24126) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (24276) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (24276) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (24276) eecs452:delta_dec: at: 140.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (24436) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (24436) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (24436) eecs452:delta_dec: at: 151.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (24596) eecs452:delta_dec: delta at (132, 96)[0m
+[0;32mI (24596) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (24606) eecs452:delta_dec: at: 69.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (24756) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (24756) eecs452:delta_dec: delta at (132, 100)[0m
+[0;32mI (24756) eecs452:delta_dec: at: 188.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (24916) eecs452:delta_dec: delta at (132, 100)[0m
+[0;32mI (24916) eecs452:delta_dec: at: 409.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (25076) eecs452:delta_dec: delta at (144, 84)[0m
+[0;32mI (25076) eecs452:delta_dec: at: 416.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (25236) eecs452:delta_dec: at: 596.000000 fps[0m
+done
+[0;32mI (25396) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (25396) eecs452:delta_dec: at: 465.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (25556) eecs452:delta_dec: delta at (132, 100)[0m
+[0;32mI (25556) eecs452:delta_dec: at: 405.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (25716) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (25716) eecs452:delta_dec: at: 416.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (25876) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (25876) eecs452:delta_dec: at: 420.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+cam_hal: EV-VSYNC-OVF
+[0;32mI (26196) eecs452:delta_dec: at: 584.000000 fps[0m
+done
+[0;32mI (26356) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (26356) eecs452:delta_dec: at: 404.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (26516) eecs452:delta_dec: at: 587.000000 fps[0m
+done
+[0;32mI (26676) eecs452:delta_dec: delta at (116, 92)[0m
+[0;32mI (26676) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (26676) eecs452:delta_dec: at: 139.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (26836) eecs452:delta_dec: at: 609.000000 fps[0m
+done
+[0;32mI (26996) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (26996) eecs452:delta_dec: at: 421.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (27146) eecs452:delta_dec: delta at (112, 96)[0m
+[0;32mI (27166) eecs452:delta_dec: at: 72.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (27316) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (27316) eecs452:delta_dec: at: 399.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (27476) eecs452:delta_dec: delta at (112, 96)[0m
+[0;32mI (27476) eecs452:delta_dec: at: 389.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (27636) eecs452:delta_dec: delta at (112, 96)[0m
+[0;32mI (27636) eecs452:delta_dec: at: 400.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (27796) eecs452:delta_dec: at: 622.000000 fps[0m
+done
+[0;32mI (27956) eecs452:delta_dec: at: 622.000000 fps[0m
+done
+[0;32mI (28116) eecs452:delta_dec: at: 608.000000 fps[0m
+done
+[0;32mI (28276) eecs452:delta_dec: at: 606.000000 fps[0m
+done
+[0;32mI (28436) eecs452:delta_dec: at: 603.000000 fps[0m
+done
+[0;32mI (28596) eecs452:delta_dec: at: 578.000000 fps[0m
+done
+[0;32mI (28756) eecs452:delta_dec: at: 589.000000 fps[0m
+done
+[0;32mI (28916) eecs452:delta_dec: at: 569.000000 fps[0m
+done
+[0;32mI (29076) eecs452:delta_dec: at: 575.000000 fps[0m
+done
+[0;32mI (29236) eecs452:delta_dec: at: 578.000000 fps[0m
+done
+[0;32mI (29396) eecs452:delta_dec: at: 584.000000 fps[0m
+done
+[0;32mI (29556) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (29556) eecs452:delta_dec: delta at (140, 92)[0m
+[0;32mI (29556) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (29566) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (29586) eecs452:delta_dec: at: 32.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (29706) eecs452:delta_dec: delta at (156, 72)[0m
+[0;32mI (29706) eecs452:delta_dec: delta at (156, 76)[0m
+[0;32mI (29716) eecs452:delta_dec: at: 93.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (29876) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (29876) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (29886) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (30026) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (30026) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (30036) eecs452:delta_dec: at: 150.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (30196) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (30196) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (30196) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (30206) eecs452:delta_dec: at: 79.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (30356) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (30356) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (30356) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (30366) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (30506) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (30516) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (30526) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (30526) eecs452:delta_dec: at: 57.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (30676) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (30676) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (30676) eecs452:delta_dec: at: 143.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (30836) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (30836) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (30836) eecs452:delta_dec: at: 132.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (30996) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (30996) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (30996) eecs452:delta_dec: at: 150.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (31156) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (31156) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (31156) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (31166) eecs452:delta_dec: at: 80.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (31316) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (31316) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (31316) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (31326) eecs452:delta_dec: at: 82.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (31476) eecs452:delta_dec: delta at (152, 80)[0m
+[0;32mI (31476) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (31476) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (31486) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (31636) eecs452:delta_dec: delta at (152, 80)[0m
+[0;32mI (31636) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (31636) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (31646) eecs452:delta_dec: at: 83.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (31796) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (31796) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (31796) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (31806) eecs452:delta_dec: at: 97.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (31956) eecs452:delta_dec: delta at (160, 80)[0m
+[0;32mI (31956) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (31956) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (31966) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (32116) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (32116) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (32126) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (32266) eecs452:delta_dec: delta at (156, 80)[0m
+[0;32mI (32266) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (32266) eecs452:delta_dec: delta at (144, 100)[0m
+[0;32mI (32286) eecs452:delta_dec: at: 56.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (32436) eecs452:delta_dec: delta at (140, 100)[0m
+[0;32mI (32436) eecs452:delta_dec: at: 440.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (32596) eecs452:delta_dec: delta at (164, 80)[0m
+[0;32mI (32596) eecs452:delta_dec: delta at (164, 84)[0m
+[0;32mI (32596) eecs452:delta_dec: at: 149.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (32756) eecs452:delta_dec: delta at (164, 88)[0m
+[0;32mI (32756) eecs452:delta_dec: delta at (160, 96)[0m
+[0;32mI (32766) eecs452:delta_dec: at: 58.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (32916) eecs452:delta_dec: delta at (156, 92)[0m
+[0;32mI (32916) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (32916) eecs452:delta_dec: at: 111.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (33076) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (33076) eecs452:delta_dec: delta at (156, 100)[0m
+[0;32mI (33076) eecs452:delta_dec: at: 136.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (33236) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (33236) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (33246) eecs452:delta_dec: at: 79.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (33396) eecs452:delta_dec: at: 608.000000 fps[0m
+done
+[0;32mI (33556) eecs452:delta_dec: delta at (132, 96)[0m
+[0;32mI (33556) eecs452:delta_dec: at: 432.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (33706) eecs452:delta_dec: delta at (132, 96)[0m
+[0;32mI (33706) eecs452:delta_dec: at: 400.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (33876) eecs452:delta_dec: delta at (132, 96)[0m
+[0;32mI (33876) eecs452:delta_dec: at: 437.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (34036) eecs452:delta_dec: delta at (128, 100)[0m
+[0;32mI (34036) eecs452:delta_dec: at: 389.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (34196) eecs452:delta_dec: at: 661.000000 fps[0m
+done
+[0;32mI (34356) eecs452:delta_dec: at: 657.000000 fps[0m
+done
+[0;32mI (34516) eecs452:delta_dec: at: 649.000000 fps[0m
+done
+[0;32mI (34676) eecs452:delta_dec: at: 645.000000 fps[0m
+done
+[0;32mI (34836) eecs452:delta_dec: at: 620.000000 fps[0m
+done
+[0;32mI (34996) eecs452:delta_dec: at: 609.000000 fps[0m
+done
+[0;32mI (35156) eecs452:delta_dec: at: 616.000000 fps[0m
+done
+[0;32mI (35316) eecs452:delta_dec: at: 634.000000 fps[0m
+done
+[0;32mI (35476) eecs452:delta_dec: at: 643.000000 fps[0m
+done
+[0;32mI (35636) eecs452:delta_dec: at: 629.000000 fps[0m
+done
+[0;32mI (35796) eecs452:delta_dec: at: 574.000000 fps[0m
+done
+[0;32mI (35956) eecs452:delta_dec: at: 580.000000 fps[0m
+done
+[0;32mI (36116) eecs452:delta_dec: at: 570.000000 fps[0m
+done
+[0;32mI (36276) eecs452:delta_dec: at: 542.000000 fps[0m
+done
+[0;32mI (36436) eecs452:delta_dec: at: 637.000000 fps[0m
+done
+[0;32mI (36596) eecs452:delta_dec: at: 661.000000 fps[0m
+done
+[0;32mI (36756) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (36756) eecs452:delta_dec: delta at (136, 100)[0m
+[0;32mI (36756) eecs452:delta_dec: at: 167.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (36916) eecs452:delta_dec: delta at (156, 80)[0m
+[0;32mI (36916) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (36916) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (36926) eecs452:delta_dec: at: 83.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (37076) eecs452:delta_dec: delta at (164, 72)[0m
+[0;32mI (37076) eecs452:delta_dec: delta at (164, 76)[0m
+[0;32mI (37076) eecs452:delta_dec: at: 142.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (37236) eecs452:delta_dec: delta at (164, 76)[0m
+[0;32mI (37236) eecs452:delta_dec: delta at (160, 80)[0m
+[0;32mI (37236) eecs452:delta_dec: at: 104.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (37396) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (37396) eecs452:delta_dec: delta at (152, 92)[0m
+[0;32mI (37406) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (37406) eecs452:delta_dec: at: 53.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (37556) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (37556) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (37556) eecs452:delta_dec: at: 183.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (37706) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (37706) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (37716) eecs452:delta_dec: at: 250.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (37876) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (37876) eecs452:delta_dec: delta at (152, 92)[0m
+[0;32mI (37876) eecs452:delta_dec: at: 133.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (38036) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (38036) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (38036) eecs452:delta_dec: at: 161.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (38196) eecs452:delta_dec: delta at (152, 80)[0m
+[0;32mI (38196) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (38196) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (38206) eecs452:delta_dec: at: 76.000000 fps[0m
+waiting on 2...waiting on 2...done
+[0;32mI (38356) eecs452:delta_dec: delta at (152, 68)[0m
+[0;32mI (38356) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (38356) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (38356) eecs452:delta_dec: at: 124.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (38516) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (38516) eecs452:delta_dec: delta at (148, 84)[0m
+[0;32mI (38516) eecs452:delta_dec: at: 227.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (38676) eecs452:delta_dec: delta at (144, 64)[0m
+[0;32mI (38676) eecs452:delta_dec: delta at (152, 68)[0m
+[0;32mI (38676) eecs452:delta_dec: delta at (152, 80)[0m
+[0;32mI (38676) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (38686) eecs452:delta_dec: at: 74.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (38826) eecs452:delta_dec: delta at (152, 72)[0m
+[0;32mI (38826) eecs452:delta_dec: delta at (152, 76)[0m
+[0;32mI (38836) eecs452:delta_dec: at: 115.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (38996) eecs452:delta_dec: delta at (152, 68)[0m
+[0;32mI (38996) eecs452:delta_dec: delta at (152, 72)[0m
+[0;32mI (38996) eecs452:delta_dec: at: 109.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (39146) eecs452:delta_dec: delta at (148, 64)[0m
+[0;32mI (39146) eecs452:delta_dec: delta at (148, 68)[0m
+[0;32mI (39146) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (39166) eecs452:delta_dec: at: 50.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (39316) eecs452:delta_dec: delta at (156, 64)[0m
+[0;32mI (39316) eecs452:delta_dec: delta at (156, 68)[0m
+[0;32mI (39316) eecs452:delta_dec: delta at (152, 72)[0m
+[0;32mI (39326) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (39476) eecs452:delta_dec: delta at (152, 68)[0m
+[0;32mI (39476) eecs452:delta_dec: delta at (152, 72)[0m
+[0;32mI (39476) eecs452:delta_dec: at: 103.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (39636) eecs452:delta_dec: delta at (140, 88)[0m
+[0;32mI (39636) eecs452:delta_dec: delta at (136, 92)[0m
+[0;32mI (39636) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (39636) eecs452:delta_dec: at: 111.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (39796) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (39796) eecs452:delta_dec: delta at (128, 100)[0m
+[0;32mI (39796) eecs452:delta_dec: at: 174.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (39946) eecs452:delta_dec: delta at (144, 72)[0m
+[0;32mI (39946) eecs452:delta_dec: delta at (140, 76)[0m
+[0;32mI (39946) eecs452:delta_dec: delta at (140, 80)[0m
+[0;32mI (39946) eecs452:delta_dec: delta at (136, 84)[0m
+[0;32mI (39956) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (39966) eecs452:delta_dec: at: 49.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (40116) eecs452:delta_dec: delta at (148, 64)[0m
+[0;32mI (40116) eecs452:delta_dec: delta at (148, 68)[0m
+[0;32mI (40126) eecs452:delta_dec: at: 79.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (40276) eecs452:delta_dec: delta at (152, 56)[0m
+[0;32mI (40276) eecs452:delta_dec: delta at (152, 60)[0m
+[0;32mI (40276) eecs452:delta_dec: delta at (152, 64)[0m
+[0;32mI (40286) eecs452:delta_dec: at: 93.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (40436) eecs452:delta_dec: delta at (152, 60)[0m
+[0;32mI (40436) eecs452:delta_dec: delta at (148, 64)[0m
+[0;32mI (40436) eecs452:delta_dec: delta at (148, 68)[0m
+[0;32mI (40446) eecs452:delta_dec: at: 83.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (40596) eecs452:delta_dec: delta at (148, 60)[0m
+[0;32mI (40596) eecs452:delta_dec: delta at (148, 64)[0m
+[0;32mI (40596) eecs452:delta_dec: at: 138.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (40756) eecs452:delta_dec: delta at (148, 56)[0m
+[0;32mI (40756) eecs452:delta_dec: delta at (148, 60)[0m
+[0;32mI (40766) eecs452:delta_dec: at: 92.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (40916) eecs452:delta_dec: delta at (152, 56)[0m
+[0;32mI (40916) eecs452:delta_dec: delta at (152, 60)[0m
+[0;32mI (40926) eecs452:delta_dec: at: 93.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (41066) eecs452:delta_dec: delta at (144, 64)[0m
+[0;32mI (41066) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (41066) eecs452:delta_dec: at: 175.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (41226) eecs452:delta_dec: delta at (152, 64)[0m
+[0;32mI (41226) eecs452:delta_dec: delta at (152, 68)[0m
+[0;32mI (41226) eecs452:delta_dec: delta at (152, 72)[0m
+[0;32mI (41236) eecs452:delta_dec: at: 71.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (41386) eecs452:delta_dec: delta at (140, 84)[0m
+[0;32mI (41386) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (41386) eecs452:delta_dec: delta at (136, 92)[0m
+[0;32mI (41396) eecs452:delta_dec: at: 96.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (41546) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (41546) eecs452:delta_dec: delta at (132, 96)[0m
+[0;32mI (41546) eecs452:delta_dec: at: 124.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (41706) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (41706) eecs452:delta_dec: delta at (132, 92)[0m
+[0;32mI (41716) eecs452:delta_dec: at: 100.000000 fps[0m
+done
+[0;32mI (41866) eecs452:delta_dec: delta at (136, 84)[0m
+[0;32mI (41866) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (41876) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42026) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (42026) eecs452:delta_dec: delta at (136, 84)[0m
+[0;32mI (42026) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (42026) eecs452:delta_dec: delta at (124, 100)[0m
+[0;32mI (42036) eecs452:delta_dec: at: 81.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42186) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (42186) eecs452:delta_dec: delta at (136, 84)[0m
+[0;32mI (42196) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42346) eecs452:delta_dec: delta at (128, 76)[0m
+[0;32mI (42346) eecs452:delta_dec: delta at (128, 80)[0m
+[0;32mI (42346) eecs452:delta_dec: at: 168.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42506) eecs452:delta_dec: delta at (124, 80)[0m
+[0;32mI (42506) eecs452:delta_dec: delta at (124, 84)[0m
+[0;32mI (42506) eecs452:delta_dec: delta at (116, 96)[0m
+[0;32mI (42506) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (42526) eecs452:delta_dec: delta at (124, 100)[0m
+[0;32mI (42526) eecs452:delta_dec: at: 42.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42666) eecs452:delta_dec: delta at (128, 68)[0m
+[0;32mI (42666) eecs452:delta_dec: delta at (120, 84)[0m
+[0;32mI (42676) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42826) eecs452:delta_dec: delta at (132, 68)[0m
+[0;32mI (42826) eecs452:delta_dec: delta at (116, 76)[0m
+[0;32mI (42826) eecs452:delta_dec: delta at (116, 84)[0m
+[0;32mI (42826) eecs452:delta_dec: delta at (108, 100)[0m
+[0;32mI (42846) eecs452:delta_dec: at: 49.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (42986) eecs452:delta_dec: delta at (116, 64)[0m
+[0;32mI (42986) eecs452:delta_dec: delta at (116, 80)[0m
+[0;32mI (42986) eecs452:delta_dec: delta at (116, 84)[0m
+[0;32mI (42996) eecs452:delta_dec: delta at (100, 96)[0m
+[0;32mI (43016) eecs452:delta_dec: at: 32.000000 fps[0m
+done
+[0;32mI (43146) eecs452:delta_dec: delta at (112, 80)[0m
+[0;32mI (43146) eecs452:delta_dec: delta at (112, 84)[0m
+[0;32mI (43146) eecs452:delta_dec: delta at (116, 96)[0m
+[0;32mI (43146) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (43156) eecs452:delta_dec: delta at (116, 100)[0m
+[0;32mI (43166) eecs452:delta_dec: at: 44.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (43306) eecs452:delta_dec: delta at (112, 84)[0m
+[0;32mI (43306) eecs452:delta_dec: delta at (108, 88)[0m
+[0;32mI (43306) eecs452:delta_dec: delta at (116, 96)[0m
+[0;32mI (43306) eecs452:delta_dec: at: 140.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (43466) eecs452:delta_dec: delta at (104, 92)[0m
+[0;32mI (43466) eecs452:delta_dec: delta at (100, 96)[0m
+[0;32mI (43466) eecs452:delta_dec: at: 257.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (43626) eecs452:delta_dec: delta at (92, 100)[0m
+[0;32mI (43626) eecs452:delta_dec: at: 425.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (43786) eecs452:delta_dec: delta at (92, 96)[0m
+[0;32mI (43786) eecs452:delta_dec: at: 407.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (43946) eecs452:delta_dec: at: 185.000000 fps[0m
+done
+[0;32mI (44106) eecs452:delta_dec: at: 655.000000 fps[0m
+done
+[0;32mI (44266) eecs452:delta_dec: at: 657.000000 fps[0m
+done
+[0;32mI (44426) eecs452:delta_dec: at: 668.000000 fps[0m
+done
+[0;32mI (44586) eecs452:delta_dec: at: 652.000000 fps[0m
+done
+[0;32mI (44746) eecs452:delta_dec: at: 628.000000 fps[0m
+done
+[0;32mI (44906) eecs452:delta_dec: at: 656.000000 fps[0m
+done
+[0;32mI (45066) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (45066) eecs452:delta_dec: at: 509.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (45226) eecs452:delta_dec: delta at (144, 68)[0m
+[0;32mI (45226) eecs452:delta_dec: delta at (140, 72)[0m
+[0;32mI (45226) eecs452:delta_dec: delta at (140, 76)[0m
+[0;32mI (45226) eecs452:delta_dec: at: 114.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (45376) eecs452:delta_dec: delta at (156, 52)[0m
+[0;32mI (45386) eecs452:delta_dec: delta at (156, 56)[0m
+[0;32mI (45386) eecs452:delta_dec: at: 162.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (45546) eecs452:delta_dec: delta at (160, 52)[0m
+[0;32mI (45546) eecs452:delta_dec: delta at (156, 56)[0m
+[0;32mI (45546) eecs452:delta_dec: delta at (152, 60)[0m
+[0;32mI (45546) eecs452:delta_dec: delta at (152, 64)[0m
+[0;32mI (45576) eecs452:delta_dec: at: 33.000000 fps[0m
+done
+[0;32mI (45706) eecs452:delta_dec: delta at (148, 64)[0m
+[0;32mI (45706) eecs452:delta_dec: delta at (148, 72)[0m
+[0;32mI (45716) eecs452:delta_dec: at: 56.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (45866) eecs452:delta_dec: delta at (140, 84)[0m
+[0;32mI (45866) eecs452:delta_dec: delta at (136, 88)[0m
+[0;32mI (45866) eecs452:delta_dec: delta at (136, 92)[0m
+[0;32mI (45866) eecs452:delta_dec: at: 119.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46026) eecs452:delta_dec: delta at (140, 92)[0m
+[0;32mI (46026) eecs452:delta_dec: at: 368.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46186) eecs452:delta_dec: delta at (140, 92)[0m
+[0;32mI (46186) eecs452:delta_dec: delta at (140, 96)[0m
+[0;32mI (46186) eecs452:delta_dec: at: 147.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46346) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (46346) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (46346) eecs452:delta_dec: at: 174.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46506) eecs452:delta_dec: delta at (136, 80)[0m
+[0;32mI (46506) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (46516) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46666) eecs452:delta_dec: delta at (144, 88)[0m
+[0;32mI (46666) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (46666) eecs452:delta_dec: at: 166.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46826) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (46826) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (46836) eecs452:delta_dec: at: 102.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (46986) eecs452:delta_dec: delta at (144, 92)[0m
+[0;32mI (46986) eecs452:delta_dec: delta at (144, 96)[0m
+[0;32mI (46986) eecs452:delta_dec: at: 228.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (47146) eecs452:delta_dec: delta at (156, 88)[0m
+[0;32mI (47146) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (47146) eecs452:delta_dec: at: 113.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (47306) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (47306) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (47306) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (47316) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (47466) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (47466) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (47466) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (47476) eecs452:delta_dec: at: 77.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (47626) eecs452:delta_dec: delta at (148, 80)[0m
+[0;32mI (47626) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (47626) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (47636) eecs452:delta_dec: at: 86.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (47776) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (47786) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (47786) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (47796) eecs452:delta_dec: at: 59.000000 fps[0m
+waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 3...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (47946) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (47946) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (47946) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (47946) eecs452:delta_dec: delta at (168, 96)[0m
+[0;32mI (47956) eecs452:delta_dec: at: 74.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (48106) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (48106) eecs452:delta_dec: delta at (148, 88)[0m
+[0;32mI (48106) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (48126) eecs452:delta_dec: at: 48.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (48266) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (48266) eecs452:delta_dec: at: 392.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (48426) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (48426) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (48436) eecs452:delta_dec: at: 153.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (48586) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (48586) eecs452:delta_dec: at: 400.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (48746) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (48746) eecs452:delta_dec: at: 423.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (48906) eecs452:delta_dec: delta at (144, 80)[0m
+[0;32mI (48906) eecs452:delta_dec: delta at (156, 80)[0m
+[0;32mI (48906) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (48916) eecs452:delta_dec: at: 86.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (49066) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (49066) eecs452:delta_dec: at: 394.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (49226) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (49226) eecs452:delta_dec: at: 422.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (49386) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (49386) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (49396) eecs452:delta_dec: at: 99.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (49546) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (49546) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (49546) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (49566) eecs452:delta_dec: at: 49.000000 fps[0m
+done
+[0;32mI (49706) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (49706) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (49706) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (49706) eecs452:delta_dec: at: 126.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (49866) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (49866) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (49866) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (49866) eecs452:delta_dec: at: 106.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (50026) eecs452:delta_dec: delta at (136, 96)[0m
+[0;32mI (50026) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (50026) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (50036) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...done
+[0;32mI (50206) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (50206) eecs452:delta_dec: delta at (152, 100)[0m
+[0;32mI (50216) eecs452:delta_dec: at: 32.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (50346) eecs452:delta_dec: delta at (148, 96)[0m
+[0;32mI (50346) eecs452:delta_dec: delta at (148, 100)[0m
+[0;32mI (50346) eecs452:delta_dec: at: 120.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (50506) eecs452:delta_dec: delta at (152, 96)[0m
+[0;32mI (50506) eecs452:delta_dec: at: 423.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (50666) eecs452:delta_dec: at: 581.000000 fps[0m
+done
+[0;32mI (50826) eecs452:delta_dec: at: 594.000000 fps[0m
+done
+[0;32mI (50986) eecs452:delta_dec: at: 625.000000 fps[0m
+done
+[0;32mI (51146) eecs452:delta_dec: at: 603.000000 fps[0m
+done
+[0;32mI (51306) eecs452:delta_dec: at: 600.000000 fps[0m
+done
+[0;32mI (51466) eecs452:delta_dec: at: 662.000000 fps[0m
+done
+[0;32mI (51626) eecs452:delta_dec: at: 651.000000 fps[0m
+done
+[0;32mI (51786) eecs452:delta_dec: at: 629.000000 fps[0m
+done
+[0;32mI (51946) eecs452:delta_dec: at: 662.000000 fps[0m
+done
+[0;32mI (52106) eecs452:delta_dec: at: 608.000000 fps[0m
+done
+[0;32mI (52266) eecs452:delta_dec: at: 662.000000 fps[0m
+done
+[0;32mI (52426) eecs452:delta_dec: at: 668.000000 fps[0m
+done
+[0;32mI (52586) eecs452:delta_dec: at: 657.000000 fps[0m
+done
+[0;32mI (52746) eecs452:delta_dec: at: 674.000000 fps[0m
+done
+[0;32mI (52906) eecs452:delta_dec: at: 661.000000 fps[0m
+done
+[0;32mI (53066) eecs452:delta_dec: at: 671.000000 fps[0m
+done
+[0;32mI (53226) eecs452:delta_dec: at: 668.000000 fps[0m
+done
+cam_hal: EV-VSYNC-OVF
+[0;32mI (53546) eecs452:delta_dec: at: 649.000000 fps[0m
+done
+[0;32mI (53706) eecs452:delta_dec: at: 625.000000 fps[0m
+done
+[0;32mI (53866) eecs452:delta_dec: at: 672.000000 fps[0m
+done
+[0;32mI (54026) eecs452:delta_dec: at: 630.000000 fps[0m
+done
+[0;32mI (54186) eecs452:delta_dec: at: 674.000000 fps[0m
+done
+[0;32mI (54346) eecs452:delta_dec: at: 669.000000 fps[0m
+done
+[0;32mI (54506) eecs452:delta_dec: at: 668.000000 fps[0m
+done
+[0;32mI (54666) eecs452:delta_dec: at: 614.000000 fps[0m
+done
+[0;32mI (54826) eecs452:delta_dec: at: 594.000000 fps[0m
+done
+[0;32mI (54986) eecs452:delta_dec: at: 641.000000 fps[0m
+done
+[0;32mI (55146) eecs452:delta_dec: at: 662.000000 fps[0m
+done
+[0;32mI (55306) eecs452:delta_dec: at: 652.000000 fps[0m
+done
+[0;32mI (55466) eecs452:delta_dec: at: 674.000000 fps[0m
+done
+[0;32mI (55626) eecs452:delta_dec: at: 674.000000 fps[0m
+done
+[0;32mI (55786) eecs452:delta_dec: at: 680.000000 fps[0m
+done
+[0;32mI (55946) eecs452:delta_dec: at: 668.000000 fps[0m
+done
+[0;32mI (56106) eecs452:delta_dec: at: 656.000000 fps[0m
+done
+[0;32mI (56266) eecs452:delta_dec: at: 657.000000 fps[0m
+done
+[0;32mI (56426) eecs452:delta_dec: at: 634.000000 fps[0m
+done
+[0;32mI (56586) eecs452:delta_dec: at: 624.000000 fps[0m
+done
+[0;32mI (56746) eecs452:delta_dec: at: 668.000000 fps[0m
+done
+[0;32mI (56906) eecs452:delta_dec: at: 633.000000 fps[0m
+done
+cam_hal: EV-VSYNC-OVF
+[0;32mI (57226) eecs452:delta_dec: delta at (188, 96)[0m
+[0;32mI (57226) eecs452:delta_dec: delta at (188, 100)[0m
+[0;32mI (57236) eecs452:delta_dec: at: 95.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (57386) eecs452:delta_dec: delta at (176, 92)[0m
+[0;32mI (57386) eecs452:delta_dec: delta at (176, 96)[0m
+[0;32mI (57386) eecs452:delta_dec: at: 178.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...done
+[0;32mI (57546) eecs452:delta_dec: delta at (156, 92)[0m
+[0;32mI (57546) eecs452:delta_dec: delta at (156, 96)[0m
+[0;32mI (57546) eecs452:delta_dec: at: 183.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (57706) eecs452:delta_dec: delta at (156, 92)[0m
+[0;32mI (57706) eecs452:delta_dec: at: 416.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (57866) eecs452:delta_dec: delta at (132, 96)[0m
+[0;32mI (57866) eecs452:delta_dec: delta at (132, 100)[0m
+[0;32mI (57866) eecs452:delta_dec: at: 107.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58026) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (58026) eecs452:delta_dec: at: 422.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58186) eecs452:delta_dec: delta at (116, 96)[0m
+[0;32mI (58186) eecs452:delta_dec: at: 409.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58346) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (58346) eecs452:delta_dec: at: 432.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58506) eecs452:delta_dec: delta at (140, 88)[0m
+[0;32mI (58506) eecs452:delta_dec: delta at (140, 92)[0m
+[0;32mI (58506) eecs452:delta_dec: at: 172.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58666) eecs452:delta_dec: delta at (156, 84)[0m
+[0;32mI (58666) eecs452:delta_dec: at: 430.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58826) eecs452:delta_dec: delta at (152, 84)[0m
+[0;32mI (58826) eecs452:delta_dec: delta at (152, 88)[0m
+[0;32mI (58826) eecs452:delta_dec: at: 171.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (58986) eecs452:delta_dec: delta at (140, 88)[0m
+[0;32mI (58986) eecs452:delta_dec: delta at (136, 92)[0m
+[0;32mI (58996) eecs452:delta_dec: at: 96.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (59146) eecs452:delta_dec: delta at (132, 92)[0m
+[0;32mI (59146) eecs452:delta_dec: at: 417.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (59296) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (59296) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (59306) eecs452:delta_dec: at: 223.000000 fps[0m
+waiting on 1...done
+[0;32mI (59466) eecs452:delta_dec: delta at (128, 96)[0m
+[0;32mI (59466) eecs452:delta_dec: at: 443.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (59626) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (59626) eecs452:delta_dec: at: 409.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (59786) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (59786) eecs452:delta_dec: at: 427.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (59946) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (59946) eecs452:delta_dec: at: 400.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (60106) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (60106) eecs452:delta_dec: at: 399.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (60266) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (60266) eecs452:delta_dec: at: 398.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (60426) eecs452:delta_dec: delta at (124, 96)[0m
+[0;32mI (60426) eecs452:delta_dec: at: 467.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (60586) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (60586) eecs452:delta_dec: at: 437.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (60746) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (60746) eecs452:delta_dec: at: 151.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (60906) eecs452:delta_dec: at: 624.000000 fps[0m
+done
+[0;32mI (61056) eecs452:delta_dec: at: 646.000000 fps[0m
+done
+[0;32mI (61226) eecs452:delta_dec: at: 645.000000 fps[0m
+done
+[0;32mI (61386) eecs452:delta_dec: at: 635.000000 fps[0m
+done
+[0;32mI (61546) eecs452:delta_dec: at: 650.000000 fps[0m
+done
+[0;32mI (61706) eecs452:delta_dec: at: 635.000000 fps[0m
+done
+[0;32mI (61866) eecs452:delta_dec: at: 665.000000 fps[0m
+done
+[0;32mI (62026) eecs452:delta_dec: at: 348.000000 fps[0m
+done
+[0;32mI (62186) eecs452:delta_dec: at: 619.000000 fps[0m
+done
+[0;32mI (62346) eecs452:delta_dec: at: 630.000000 fps[0m
+done
+[0;32mI (62506) eecs452:delta_dec: at: 628.000000 fps[0m
+done
+[0;32mI (62666) eecs452:delta_dec: at: 634.000000 fps[0m
+done
+[0;32mI (62826) eecs452:delta_dec: at: 645.000000 fps[0m
+done
+[0;32mI (62986) eecs452:delta_dec: at: 663.000000 fps[0m
+done
+[0;32mI (63146) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (63146) eecs452:delta_dec: at: 525.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (63306) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (63306) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (63306) eecs452:delta_dec: at: 108.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (63466) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (63466) eecs452:delta_dec: at: 451.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (63616) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (63616) eecs452:delta_dec: at: 427.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (63786) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (63786) eecs452:delta_dec: at: 436.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (63946) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (63946) eecs452:delta_dec: at: 417.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (64106) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (64106) eecs452:delta_dec: at: 456.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (64266) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (64266) eecs452:delta_dec: at: 413.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (64416) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (64426) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (64436) eecs452:delta_dec: at: 41.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (64586) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (64586) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (64596) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 1...waiting on 1...done
+[0;32mI (64736) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (64736) eecs452:delta_dec: at: 425.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (64906) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (64906) eecs452:delta_dec: at: 453.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (65066) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (65066) eecs452:delta_dec: delta at (120, 100)[0m
+[0;32mI (65066) eecs452:delta_dec: at: 109.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (65226) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (65226) eecs452:delta_dec: at: 460.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (65386) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (65386) eecs452:delta_dec: at: 403.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (65546) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (65546) eecs452:delta_dec: at: 417.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (65706) eecs452:delta_dec: delta at (116, 96)[0m
+[0;32mI (65706) eecs452:delta_dec: at: 411.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (65856) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (65866) eecs452:delta_dec: at: 180.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66016) eecs452:delta_dec: delta at (120, 96)[0m
+[0;32mI (66016) eecs452:delta_dec: at: 433.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66176) eecs452:delta_dec: delta at (128, 92)[0m
+[0;32mI (66176) eecs452:delta_dec: at: 434.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66336) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (66336) eecs452:delta_dec: at: 435.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66496) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (66496) eecs452:delta_dec: delta at (132, 92)[0m
+[0;32mI (66496) eecs452:delta_dec: at: 171.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66656) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (66656) eecs452:delta_dec: at: 422.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66816) eecs452:delta_dec: delta at (132, 88)[0m
+[0;32mI (66816) eecs452:delta_dec: at: 431.000000 fps[0m
+waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (66976) eecs452:delta_dec: delta at (124, 64)[0m
+[0;32mI (66976) eecs452:delta_dec: delta at (124, 68)[0m
+[0;32mI (66976) eecs452:delta_dec: delta at (128, 72)[0m
+[0;32mI (66986) eecs452:delta_dec: at: 94.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 2...done
+[0;32mI (67136) eecs452:delta_dec: delta at (100, 28)[0m
+[0;32mI (67136) eecs452:delta_dec: delta at (104, 32)[0m
+[0;32mI (67136) eecs452:delta_dec: at: 162.000000 fps[0m
+waiting on 2...waiting on 2...waiting on 2...waiting on 2...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...waiting on 1...done
+[0;32mI (67296) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (67456) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (67616) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (67776) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (67936) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (68096) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (68256) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (68416) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (68576) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (68736) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (68896) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (69056) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (69216) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (69376) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (69536) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (69696) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (69856) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (70016) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (70176) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (70336) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (70496) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (70656) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (70816) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (70976) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (71136) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (71296) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (71456) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (71616) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (71776) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (71936) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (72096) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (72256) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (72416) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (72576) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (72746) eecs452:delta_dec: at: 87.000000 fps[0m
+done
+[0;32mI (72896) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (73056) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (73216) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (73376) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (73536) eecs452:delta_dec: at: 701.000000 fps[0m
+done
+[0;32mI (73696) eecs452:delta_dec: at: 699.000000 fps[0m
+done
+[0;32mI (73856) eecs452:delta_dec: at: 701.000000 fps[0m
+done
