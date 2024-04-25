@@ -18,7 +18,9 @@ Detection:
             and transmits windowed image over UDP.
 
 Base station:
-1. 
+1. src/main.rs - base-station driver methods. Responsible for receiving UDP packets, reconstructing data, performing April tag detection, and delegating tasks to the ekf and visualization methods.
+2. src/ekf.rs - Rust definition of extended kalman filter and corresponding thread pool.
+3. src/visualization.rs - visualizes reconstructed 3D points with KISS3D library.
 
 To reproduce this project, you will follow the specific order above.
 
