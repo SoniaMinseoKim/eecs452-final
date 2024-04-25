@@ -1,4 +1,13 @@
 Usage Tutorial
 
-ESP32-CAM 
-After following the INSTALLATION.TXT guide, the ESPs can be flashed with calibration code.
+The ESP32-CAMs can be flashed according to the User Guide in INSTALLATION.TXT with idf.py build, flash, and monitor.
+
+CALIBRATION
+The ESPs can be flashed with calibration code. The receiving server can be configured through idf.py menuconfig -> User Configuration -> IPv4 Address. WiFi must be configured through Example Connection Configuration, and "Obtain IPv6 address" should not be checked off. The images will be sent to this address and port, as can be adjusted in the src/jpeg_live_image.py file. Each camera should have a different CAM_ID, as in src/calibration/main/jpeg_transmit.c. To find camera extrinsics, calibration.py can be run. The corresponding calibration_results.npz file stores the arrays of camera data and must be fed into the base-station.
+
+
+DETECTION
+The ESPs can be flashed with detection data. As with calibration, the receiving server can be configured through idf.py menuconfig -> User Configuration -> IPv4 Address. WiFi must be configured through Example Connection Configuration, and "Obtain IPv6 address" should not be checked off. However, each IPv4 PORT must ALSO be different for each camera, as this is how the base-station labels each camera. 
+
+BASE-STATION
+The base-station can be run through Rust cargo run. 
