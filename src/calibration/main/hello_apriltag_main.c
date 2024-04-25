@@ -128,40 +128,7 @@ static void udp_client_task(void *pvParameters)
         struct sockaddr_storage dest_addr = { 0 };
         ESP_ERROR_CHECK(get_addr_from_stdin(PORT, SOCK_DGRAM, &ip_protocol, &addr_family, &dest_addr));
 #endif
-    while(1){}
-/*
-        
-        while (1) {
-            
-            struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
-            socklen_t socklen = sizeof(source_addr);
-            int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
-
-            // Error occurred during receiving
-            if (len < 0) {
-                ESP_LOGE(TAG, "recvfrom failed: errno %d", errno);
-                // break;
-            }
-            // Data received
-            else {
-                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
-                ESP_LOGI(TAG, "Received %d bytes from %s:", len, host_ip);
-                ESP_LOGI(TAG, "%s", rx_buffer);
-                if (strncmp(rx_buffer, "OK: ", 4) == 0) {
-                    ESP_LOGI(TAG, "Received expected message, reconnecting");
-                    // break;
-                }
-            }
-
-            vTaskDelay(200 / portTICK_PERIOD_MS);
-        }
-
-        if (sock != -1) {
-            ESP_LOGE(TAG, "Shutting down socket and restarting...");
-            shutdown(sock, 0);
-            close(sock);
-        }
-    vTaskDelete(NULL); */
+    while(1){}     
 }
 
 static esp_err_t init_camera(void)
@@ -170,7 +137,6 @@ static esp_err_t init_camera(void)
     esp_err_t err = esp_camera_init(&camera_config);
     if (err != ESP_OK)
     {
-        // ESP_LOGE(TAG, "Camera Init Failed");
         return err;
     }
 
@@ -188,9 +154,7 @@ void app_main(void)
      * examples/protocols/README.md for more information about this function.
      */
     ESP_ERROR_CHECK(example_connect());
-
-    // xTaskCreate(udp_client_task, "udp_client", 4096, NULL, 5, NULL);
-    // setvbuf(stdout, NULL, _IONBF, 0);
+   
     #if ESP_CAMERA_SUPPORTED
     if(ESP_OK != init_camera()) {
         return;
@@ -227,24 +191,15 @@ void app_main(void)
 
     while (1)
     {
-        // ESP_LOGI(TAG, "Taking picture...");
         camera_fb_t *pic = esp_camera_fb_get();
         pic->buf[pic->len] = CAM_ID; 
         int err = sendto(sock, pic->buf, pic->len + 1, 0, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
         if (err < 0) {
             ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
-            // break;
         }
         ESP_LOGI(TAG, "Message sent");
         
-        // char *value = "H"; 
-        // payload = value; 
-        // use pic->buf to access the image
-        // ESP_LOGI(TAG, "Picture taken! Its size was: %zu bytes", pic->len);
-        // send_image_over_serial(pic); 
         esp_camera_fb_return(pic);
-
-        // vTaskDelay(200 / portTICK_RATE_MS);
     }
     
 #else
