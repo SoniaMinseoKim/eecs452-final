@@ -1,1 +1,27 @@
+Source Code Overview
+
+This src folder is mainly divided into three sub-folders that correspond to the 
+three main modules in our project - calibration, detection, and base station.
+
+Following are brief descriptions of the main source files in each sub-folder.
+The rest of the files are either configuration files or esp32-espressif modules
+you need for the code to run on your esp32.
+
+Calibration:
+1. calibration.py - generates camera matrices for each camera by detecting the 
+                    7x7 chessboard in view and stores them into .npz file
+2. jpeg_live_image.py - continuously receives JPEG image data over UDP and 
+                        saves the images to files in a specified directory
+
+Detection:
+1. main.c - captures images from esp camera, detects blobs (bright retroreflective markers), 
+            and transmits windowed image over UDP.
+
+Base station:
+1. 
+
+To reproduce this project, you will follow the specific order above.
+
+More details about how to run the code can be found in USAGE.txt
+
 
