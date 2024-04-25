@@ -1,1 +1,4 @@
-# Installation
+Installation
+
+To build, flash, and run C code on the ESP32 microprocessors, our group recommends using the ESP32 Integrated Development Environment available here:  
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html
