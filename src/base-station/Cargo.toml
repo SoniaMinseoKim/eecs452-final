@@ -1,0 +1,19 @@
+[package]
+name = "cam-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+apriltag = "0.4.0"
+apriltag-image = "0.1.0"
+nalgebra = "0.30.1"
+tokio = { version = "1.0", features = ["rt-multi-thread", "macros"] }
+bytes = "1"
+rtp = "0.10.0"
+webrtc-util = "0.8.1"
+serde = "1.0.197"
+kiss3d = "0.35.0"
+byte_struct = "0.9.0"
+apriltag-sys = "0.3.0"
+numpy = "0.21.0"
+npyz = {version = "0.8.3", features = ["npz"]}
